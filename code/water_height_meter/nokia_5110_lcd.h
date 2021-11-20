@@ -78,6 +78,11 @@ void LCD_write_byte(unsigned char dat, unsigned char command);
 void LCD_write_english_string(unsigned char X,unsigned char Y,char *s);
 void LCD_write_char(unsigned char c);
 void LCD_set_XY(unsigned char X, unsigned char Y);
+void LCD_write_init();
+void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_y);
 
+/* Defines */
+
+#define NUM_OF_CELLS    504
 
 #endif /* NOKIA_5110_LCD_H_ */

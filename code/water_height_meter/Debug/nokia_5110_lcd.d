@@ -14,7 +14,7 @@ nokia_5110_lcd.d nokia_5110_lcd.o: .././nokia_5110_lcd.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- .././english_font.h
+ .././english_font.h .././water_symbols.h
 
 .././nokia_5110_lcd.h:
 
@@ -47,3 +47,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
 .././english_font.h:
+
+.././water_symbols.h:

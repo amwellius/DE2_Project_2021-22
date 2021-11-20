@@ -7,6 +7,7 @@
 
 #include "nokia_5110_lcd.h"
 #include "english_font.h"
+#include "water_symbols.h"
 
 void LCD_init() 
 {
@@ -48,7 +49,7 @@ void LCD_clear()
     LCD_write_byte(0x0c, 1);
     LCD_write_byte(0x80, 1);
 
-    for (unsigned int i = 0; i < 504; i++)
+    for (unsigned int i = 0; i < NUM_OF_CELLS; i++)
     {
         LCD_write_byte(0, 0);
     }
@@ -99,4 +100,17 @@ void LCD_write_english_string(unsigned char X, unsigned char Y, char *s)
         LCD_write_char(*s);
         s++;
     }
+}
+
+void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_y) {
+    LCD_set_XY(0, (unsigned char) start_y);
+    for (uint16_t i = 0; i < cells_n; i++)
+        LCD_write_byte(cells[i], 0);
+}
+
+void LCD_write_init()
+{
+    LCD_clear();
+    _delay_ms(1000);
+    LCD_write_whole_screen((unsigned char*) init_msg_2, NUM_OF_CELLS, 0);    
 }

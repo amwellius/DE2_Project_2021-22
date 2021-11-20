@@ -16,7 +16,12 @@
 int main(void)
 {
     LCD_init();       //LCD initialization
-
+    
+    // show init screen, sleep 5s
+    LCD_write_init();  
+    _delay_ms(5000);
+    LCD_clear();
+    
     LCD_write_english_string(0, 0, "Hello World !");
     #ifdef ARDUINO_MEGA
     LCD_write_english_string(0, 1, "Communicating with AVR 2560 ");
