@@ -98,7 +98,7 @@ Write your text here
 ## References
 
 ### Used materials:
-- Theoretical knowledge from Digital-Electronics-2, 2021 > [Link]https://moodle.vut.cz/course/view.php?id=242365)
+   - Theoretical knowledge from Digital-Electronics-2, 2021 > [Link](https://moodle.vut.cz/course/view.php?id=242365)
    - Lab classes **DE2** > [Link](https://github.com/tomas-fryza/Digital-electronics-2)
    - online stuff > [Link](www.hereenterlink.hell)
    - online stuff > [Link](www.hereenterlink.hell)
