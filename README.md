@@ -110,8 +110,9 @@ Write your text here
    ### Used programs and its links:
    - [MicroChip Studio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)
    - [SimulIDE](https://www.simulide.com/p/home.html)
-   - [GitHub Desktop]( https://desktop.github.com/)
-   - [Git Bash]( https://git-scm.com/download/win)
+   - [GitHub](https://github.com/)
+   - [GitHub Desktop](https://desktop.github.com/)
+   - [Git Bash](https://git-scm.com/download/win)
    
 ________________________________________________________________________________
 ©2021, VUT FEKT, Brno, Czech Republic <br/>
