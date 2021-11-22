@@ -3,10 +3,10 @@
 
 ### Team members
 
-* Filip Kocum, 22xxxx (responsible for xxx)
-* Martin Knob, 22xxxx (responsible for xxx)
-* Gregor Karetka, 22xxxx (responsible for xxx)
-* Samuel Košík, 221056, (crying, not helping)
+- **Samuel Košík**, **ID=** *221056* (crying, procrastinating)<br/> 
+- **Gregor Karetka**, **ID=** *221053* (NOKIA library, C coding, main brainstorning)<br/> 
+- **Filip Kocum**, **ID=**  *221055* (best beer consumer, food-team-provider) <br/> 
+- **Martin Knob**, **ID=** *221054* (FSM state machine, mechanic applications) <br/>
 
 Link to this file in your GitHub repository:
 
@@ -97,4 +97,25 @@ Write your text here
 
 ## References
 
-1. Write your text here.
+### Used materials:
+- Theoretical knowledge from Digital-Electronics-2, 2021 > [Link]https://moodle.vut.cz/course/view.php?id=242365)
+   - Lab classes **DE2** > [Link](https://github.com/tomas-fryza/Digital-electronics-2)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - LaTeX equation editor > [Link](https://www.codecogs.com/latex/eqneditor.php)
+   
+ 
+   ### Used programs and its links:
+   - [MicroChip Studio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)
+   - [SimulIDE](https://www.simulide.com/p/home.html)
+   - [GitHub Desktop]( https://desktop.github.com/)
+   - [Git Bash]( https://git-scm.com/download/win)
+   
+________________________________________________________________________________
+©2021, VUT FEKT, Brno, Czech Republic <br/>
+Košík, Karetka, Kocum, Knob <br/>
+**For Educational Purposes Only!**
+
+
