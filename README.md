@@ -1,11 +1,12 @@
+![image](Images/fekt_logo.png) <br/>
 # WATER TANK CONTROLLER
 
 ### Team members
 
-* Filip Kocum, 22xxxx (responsible for xxx)
-* Martin Knob, 22xxxx (responsible for xxx)
-* Gregor Karetka, 22xxxx (responsible for xxx)
-* Samuel Košík, 221056, (crying, not helping)
+- **Samuel Košík**, **ID=** *221056* (crying, procrastinating)<br/> 
+- **Gregor Karetka**, **ID=** *221053* (NOKIA library, C coding, main brainstorning)<br/> 
+- **Filip Kocum**, **ID=**  *221055* (best beer consumer, food-team-provider) <br/> 
+- **Martin Knob**, **ID=** *221054* (FSM state machine, mechanic applications) <br/>
 
 Link to this file in your GitHub repository:
 
@@ -52,11 +53,13 @@ Write your text here.
 &nbsp;
 
 ### UltraSonic sensor HC-SR04
-[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets/HCSR04.pdf)
-**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
+[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/HCSR04.pdf)
+
 &nbsp;
 ![figure](Images/HCSR04.png)
 &nbsp;
+
+**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
 
 Main sensor (one of **two???**) for measuring the water level of the tank. After entering its dimensions (or volume), the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40MHz signal. This will be given by *ECHO pin*, so received value will the time the wave travelled to the watel level and back to the sensor. Final distance can be obtained by this equation: 
 
@@ -79,8 +82,11 @@ Write your text here.
 
 ## Main application
 
-Write your text here.
+**OBRAZOK AKO TO CELE VYZERA/T BUDE**
 
+The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows *water level in cm, percenttage and max usable volume of the water-tank. Application uses one more sensor **??????** to control the max volume. In normal conditions, sensor all time gives negative data of water level. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem ("Dirty water", "Hardware issue", ...).
+
+Our product has **(2)** relays for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
 <a name="video"></a>
 
 ## Video
@@ -91,4 +97,25 @@ Write your text here
 
 ## References
 
-1. Write your text here.
+### Used materials:
+- Theoretical knowledge from Digital-Electronics-2, 2021 > [Link]https://moodle.vut.cz/course/view.php?id=242365)
+   - Lab classes **DE2** > [Link](https://github.com/tomas-fryza/Digital-electronics-2)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - online stuff > [Link](www.hereenterlink.hell)
+   - LaTeX equation editor > [Link](https://www.codecogs.com/latex/eqneditor.php)
+   
+ 
+   ### Used programs and its links:
+   - [MicroChip Studio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)
+   - [SimulIDE](https://www.simulide.com/p/home.html)
+   - [GitHub Desktop]( https://desktop.github.com/)
+   - [Git Bash]( https://git-scm.com/download/win)
+   
+________________________________________________________________________________
+©2021, VUT FEKT, Brno, Czech Republic <br/>
+Košík, Karetka, Kocum, Knob <br/>
+**For Educational Purposes Only!**
+
+
