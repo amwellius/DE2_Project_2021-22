@@ -3,10 +3,10 @@
 
 ### Team members
 
-- **Samuel Košík**, **ID=** *221056* (crying, procrastinating)<br/> 
-- **Gregor Karetka**, **ID=** *221053* (NOKIA library, C coding, main brainstorning)<br/> 
-- **Filip Kocum**, **ID=**  *221055* (best beer consumer, food-team-provider) <br/> 
-- **Martin Knob**, **ID=** *221054* (FSM state machine, mechanic applications) <br/>
+- **Samuel Košík**,   &nbsp;&nbsp;&nbsp;&nbsp;              *id=221056*,   &nbsp;&nbsp;    (crying, procrastinating)<br/> 
+- **Gregor Karetka**,   &nbsp;                             *id=221053*,   &nbsp;&nbsp;    (NOKIA library, C coding, main brainstorning)<br/> 
+- **Filip Kocum**,   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *id=221055*,   &nbsp;&nbsp;    (best beer consumer, food-team-provider) <br/> 
+- **Martin Knob**,   &nbsp;&nbsp;&nbsp;&nbsp;               *id=221054*,   &nbsp;&nbsp;    (FSM state machine, mechanic applications) <br/>
 
 Link to this file in your GitHub repository:
 
