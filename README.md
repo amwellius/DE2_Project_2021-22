@@ -31,17 +31,17 @@ Write your text here.
 ## Hardware description
 
 ### Arduino Uno + breadboard 
-[Datasheet](link)
+[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/ATMega_328P_datasheet.pdf)
 
 &nbsp;
 ![ASI NEJAKA VLASTNA FOTKA](Images/obrazok.png)
 &nbsp;
 
 ### Nokia 5110 LCD display 
-[Datasheet](link)
+[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/Nokia5110_datasheet.pdf)
 
 &nbsp;
-![figure](Images/obrazok.png)
+![asi tiez vlastny obrazok](Images/obrazok.png)
 &nbsp;
 
 ### RGB LED, Relay Modules (1, 2, or 4 relays) ...........PARTICULAR..........
@@ -53,7 +53,7 @@ Write your text here.
 
 ### UltraSonic sensor HC-SR04
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets/HCSR04.pdf)
-
+**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
 &nbsp;
 ![figure](Images/HCSR04.png)
 &nbsp;
