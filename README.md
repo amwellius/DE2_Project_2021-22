@@ -59,6 +59,7 @@ Write your text here.
 &nbsp;
 
 **TIEZ ASI RADSEJ VLASTNY OBRAZOK**
+
 Main sensor (one of **two???**) for measuring the water level of the tank. After entering its dimensions (or volume), the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40MHz signal. This will be given by *ECHO pin*, so received value will the time the wave travelled to the watel level and back to the sensor. Final distance can be obtained by this equation: 
 
 &nbsp;
@@ -84,8 +85,7 @@ Write your text here.
 
 The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows *water level in cm, percenttage and max usable volume of the water-tank. Application uses one more sensor **??????** to control the max volume. In normal conditions, sensor all time gives negative data of water level. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem ("Dirty water", "Hardware issue", ...).
 
-
-
+Our product has **(2)** relays for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
 <a name="video"></a>
 
 ## Video
