@@ -1,4 +1,4 @@
-# YOUR_PROJECT_TITLE
+# WATER TANK CONTROLLER
 
 ### Team members
 
@@ -9,11 +9,11 @@
 
 Link to this file in your GitHub repository:
 
-[https://github.com/your-github-account/repository-name/project](https://github.com/...)
+[https://github.com/amwellius/DE2_Project_2021-22](https://github.com/amwellius/DE2_Project_2021-22)
 
 ### Table of contents
 
-- [YOUR_PROJECT_TITLE](#your_project_title)
+- [Water Tank Controller](#WATER TANK CONTROLLER)
     - [Team members](#team-members)
     - [Table of contents](#table-of-contents)
   - [Project objectives](#project-objectives)
