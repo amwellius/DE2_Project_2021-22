@@ -52,12 +52,13 @@ Write your text here.
 &nbsp;
 
 ### UltraSonic sensor HC-SR04
-[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets/HCSR04.pdf)
-**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
+[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/HCSR04.pdf)
+
 &nbsp;
 ![figure](Images/HCSR04.png)
 &nbsp;
 
+**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
 Main sensor (one of **two???**) for measuring the water level of the tank. After entering its dimensions (or volume), the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40MHz signal. This will be given by *ECHO pin*, so received value will the time the wave travelled to the watel level and back to the sensor. Final distance can be obtained by this equation: 
 
 &nbsp;
