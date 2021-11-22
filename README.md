@@ -1,3 +1,4 @@
+![image](Images/fekt_logo.png) <br/>
 # WATER TANK CONTROLLER
 
 ### Team members
