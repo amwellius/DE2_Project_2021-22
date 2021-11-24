@@ -16,7 +16,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define ARDUINO_MEGA
+//#define ARDUINO_MEGA
+#define ARDUINO_UNO
 
 /* Arduino Mega
  * E5 - RST
@@ -48,7 +49,25 @@
 
 #else
 
-// TODO - Arduino UNO pinout
+#define LCD_RST_PORT    PORTB
+#define LCD_RST_DDR     DDRB
+#define LCD_RST_PIN     3
+
+#define LCD_CE_PORT     PORTB
+#define LCD_CE_DDR      DDRB
+#define LCD_CE_PIN      2
+
+#define LCD_DC_PORT     PORTB
+#define LCD_DC_DDR      DDRB
+#define LCD_DC_PIN      1
+
+#define SDIN_PORT       PORTB
+#define SDIN_DDR        DDRB
+#define SDIN_PIN        0
+
+#define SCLK_PORT       PORTD
+#define SCLK_DDR        DDRD
+#define SCLK_PIN        7
 
 #endif
 
