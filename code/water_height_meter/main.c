@@ -12,6 +12,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "nokia_5110_lcd.h"
+#include <stdlib.h>
 
 int main(void)
 {
@@ -19,7 +20,7 @@ int main(void)
     
     // show init screen, sleep 5s
     LCD_write_init();  
-    _delay_ms(5000);
+    _delay_ms(2000);
     LCD_clear();
     
     LCD_write_english_string(0, 0, "Hello World !");
@@ -30,9 +31,16 @@ int main(void)
     #endif
     
     /* Replace with your application code */
+    uint8_t i = 0;
+    
+    char transmit_char[4];
     while (1) 
     {
-        
+        LCD_clear();
+        itoa(i, transmit_char, 10);
+        LCD_write_english_string(0, 0, transmit_char);
+        _delay_ms(100);
+        i++;
     }
 }
 
