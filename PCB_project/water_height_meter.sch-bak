@@ -296,7 +296,7 @@ Wire Wire Line
 	1700 1350 1700 1450
 Connection ~ 1700 1450
 Text Notes 1200 3300 0    50   ~ 0
-To HC-SR04
+HC-SR04 connector
 $Comp
 L my_power:VCC #PWR0108
 U 1 1 619B3260
@@ -367,7 +367,7 @@ F 3 "~" H 1250 4300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Notes 1150 4750 0    50   ~ 0
-To Nokia 5110 LCD
+Nokia 5110 LCD connector
 Wire Wire Line
 	1450 3900 2750 3900
 Text Label 2050 4600 0    50   ~ 0
@@ -440,36 +440,36 @@ Entry Wire Line
 	3600 4200 3500 4300
 Entry Wire Line
 	3600 4100 3500 4200
-Text Label 4500 2850 0    50   ~ 0
+Text Label 4500 3050 0    50   ~ 0
 RST
-Text Label 4500 2750 0    50   ~ 0
+Text Label 4500 2950 0    50   ~ 0
 ~CE
-Text Label 4500 2650 0    50   ~ 0
+Text Label 4500 2850 0    50   ~ 0
 DC
-Text Label 4500 2550 0    50   ~ 0
+Text Label 4500 2750 0    50   ~ 0
 DIN
-Text Label 4500 2450 0    50   ~ 0
+Text Label 4500 2650 0    50   ~ 0
 CLK
-Wire Wire Line
-	4750 2450 4200 2450
-Wire Wire Line
-	4200 2550 4750 2550
 Wire Wire Line
 	4750 2650 4200 2650
 Wire Wire Line
 	4200 2750 4750 2750
 Wire Wire Line
 	4750 2850 4200 2850
-Entry Wire Line
-	4100 2550 4200 2450
-Entry Wire Line
-	4100 2650 4200 2550
+Wire Wire Line
+	4200 2950 4750 2950
+Wire Wire Line
+	4750 3050 4200 3050
 Entry Wire Line
 	4100 2750 4200 2650
 Entry Wire Line
 	4100 2850 4200 2750
 Entry Wire Line
 	4100 2950 4200 2850
+Entry Wire Line
+	4100 3050 4200 2950
+Entry Wire Line
+	4100 3150 4200 3050
 Wire Bus Line
 	3600 3450 4100 3450
 $Comp
@@ -547,12 +547,12 @@ Wire Wire Line
 	3500 4500 3250 4500
 Wire Wire Line
 	3250 4600 3500 4600
-Wire Bus Line
-	4100 2550 4100 3450
-Wire Bus Line
-	3600 3450 3600 4500
 Text Label 1600 2800 0    50   ~ 0
 ECHO
 Text Label 1600 2900 0    50   ~ 0
 TRIG
+Wire Bus Line
+	3600 3450 3600 4500
+Wire Bus Line
+	4100 2750 4100 3450
 $EndSCHEMATC

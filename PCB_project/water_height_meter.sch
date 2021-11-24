@@ -323,7 +323,7 @@ F 3 "~" H 1300 2900 50  0001 C CNN
 	1    1300 2900
 	-1   0    0    1   
 $EndComp
-Text Label 4500 2350 0    50   ~ 0
+Text Label 4500 2450 0    50   ~ 0
 TRIG
 Wire Wire Line
 	1500 3000 1950 3000
@@ -341,20 +341,10 @@ F 3 "" H 1950 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1500 3100 1950 3100
-Text Label 4500 2250 0    50   ~ 0
+Text Label 4500 2550 0    50   ~ 0
 ECHO
 Wire Wire Line
-	3800 2800 3800 2250
-Wire Wire Line
-	3800 2250 4750 2250
-Wire Wire Line
-	1500 2800 3800 2800
-Wire Wire Line
-	3900 2900 3900 2350
-Wire Wire Line
-	3900 2350 4750 2350
-Wire Wire Line
-	1500 2900 3900 2900
+	3800 2550 4750 2550
 $Comp
 L Connector:Conn_01x08_Female J2
 U 1 1 61995D6C
@@ -440,36 +430,36 @@ Entry Wire Line
 	3600 4200 3500 4300
 Entry Wire Line
 	3600 4100 3500 4200
-Text Label 4500 2850 0    50   ~ 0
+Text Label 4500 3050 0    50   ~ 0
 RST
-Text Label 4500 2750 0    50   ~ 0
+Text Label 4500 2950 0    50   ~ 0
 ~CE
-Text Label 4500 2650 0    50   ~ 0
+Text Label 4500 2850 0    50   ~ 0
 DC
-Text Label 4500 2550 0    50   ~ 0
+Text Label 4500 2750 0    50   ~ 0
 DIN
-Text Label 4500 2450 0    50   ~ 0
+Text Label 4500 2650 0    50   ~ 0
 CLK
-Wire Wire Line
-	4750 2450 4200 2450
-Wire Wire Line
-	4200 2550 4750 2550
 Wire Wire Line
 	4750 2650 4200 2650
 Wire Wire Line
 	4200 2750 4750 2750
 Wire Wire Line
 	4750 2850 4200 2850
-Entry Wire Line
-	4100 2550 4200 2450
-Entry Wire Line
-	4100 2650 4200 2550
+Wire Wire Line
+	4200 2950 4750 2950
+Wire Wire Line
+	4750 3050 4200 3050
 Entry Wire Line
 	4100 2750 4200 2650
 Entry Wire Line
 	4100 2850 4200 2750
 Entry Wire Line
 	4100 2950 4200 2850
+Entry Wire Line
+	4100 3050 4200 2950
+Entry Wire Line
+	4100 3150 4200 3050
 Wire Bus Line
 	3600 3450 4100 3450
 $Comp
@@ -547,12 +537,22 @@ Wire Wire Line
 	3500 4500 3250 4500
 Wire Wire Line
 	3250 4600 3500 4600
+Text Label 1600 2900 0    50   ~ 0
+ECHO
+Text Label 1600 2800 0    50   ~ 0
+TRIG
+Wire Wire Line
+	4750 2450 3700 2450
+Wire Wire Line
+	3800 2550 3800 2900
+Wire Wire Line
+	3800 2900 1500 2900
+Wire Wire Line
+	1500 2800 3700 2800
+Wire Wire Line
+	3700 2800 3700 2450
 Wire Bus Line
-	4100 2550 4100 3450
+	4100 2750 4100 3450
 Wire Bus Line
 	3600 3450 3600 4500
-Text Label 1600 2800 0    50   ~ 0
-ECHO
-Text Label 1600 2900 0    50   ~ 0
-TRIG
 $EndSCHEMATC

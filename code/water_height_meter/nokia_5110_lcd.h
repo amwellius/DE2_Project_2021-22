@@ -27,6 +27,14 @@
  * H3 - DIN - data in
  * H4 - CLK - SPI clk
  */
+
+/* Arduino Uno
+ * B5 - RST
+ * B4 - CE - can be asserted low
+ * B3 - DC - data/command
+ * B2 - DIN - data in
+ * B1 - CLK - SPI clk
+*/
 #ifdef ARDUINO_MEGA
 #define LCD_RST_PORT    PORTE
 #define LCD_RST_DDR     DDRE
@@ -52,23 +60,23 @@
 
 #define LCD_RST_PORT    PORTB
 #define LCD_RST_DDR     DDRB
-#define LCD_RST_PIN     3
+#define LCD_RST_PIN     5
 
 #define LCD_CE_PORT     PORTB
 #define LCD_CE_DDR      DDRB
-#define LCD_CE_PIN      2
+#define LCD_CE_PIN      4
 
 #define LCD_DC_PORT     PORTB
 #define LCD_DC_DDR      DDRB
-#define LCD_DC_PIN      1
+#define LCD_DC_PIN      3
 
 #define SDIN_PORT       PORTB
 #define SDIN_DDR        DDRB
-#define SDIN_PIN        0
+#define SDIN_PIN        2
 
-#define SCLK_PORT       PORTD
+#define SCLK_PORT       PORTB
 #define SCLK_DDR        DDRD
-#define SCLK_PIN        7
+#define SCLK_PIN        1
 
 #endif
 

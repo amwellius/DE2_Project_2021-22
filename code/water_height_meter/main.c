@@ -5,44 +5,29 @@
  * Author : gkaretka
  */ 
 
-#ifndef F_CPU
-    #define F_CPU 16000000L
-#endif
-
-
-
-#include <avr/io.h>
-#include <util/delay.h>
 #include "main.h"
-#include "HC-SR04.h"
-#include "gpio.h"
 
 int main(void)
 {
-    LCD_init();       //LCD initialization
-    init_ultrasonic_sensor();
+    LCD_init();                 // LCD initialization
+    init_ultrasonic_sensor();   // Ultrasonic init
+    
     // show init screen, sleep 5s
     LCD_write_init();  
+    LCD_write_whole_screen((unsigned char *)init_msg_1, 504, 0);
     _delay_ms(2000);
     LCD_clear();
     
-    LCD_write_english_string(0, 0, "Hello World !");
-    #ifdef ARDUINO_MEGA
-    LCD_write_english_string(0, 1, "Communicating with AVR 2560 ");
-    #else
-    LCD_write_english_string(0, 1, "Communicating with AVR 328p ");
-    #endif
-    
     /* Replace with your application code */
-    uint16_t i = 0;
-    char str[5];
+    uint32_t distance_val = 0;
+    char distance_str[5];
     while (1) 
     {
-        LCD_clear();
-        i = (uint16_t)get_cnt();
-        
-        itoa(i,str,10);
-        LCD_write_english_string(0, 0,falling );
+        LCD_clear();                                    // Clear lcd
+        distance_val = (uint32_t) get_dist();           // Get distance in mm
+        itoa(distance_val, distance_str, 10);           // Convert to str
+        LCD_write_english_string(0, 0, distance_str);   // Display
+        LCD_write_english_string(6, 0, "mm");
         
         _delay_ms(1000);
     }
