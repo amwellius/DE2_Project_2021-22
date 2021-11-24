@@ -15,6 +15,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "water_symbols.h"
 
 //#define ARDUINO_MEGA
 #define ARDUINO_UNO

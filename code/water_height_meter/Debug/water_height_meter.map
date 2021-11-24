@@ -4,12 +4,8 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               main.o (__do_copy_data)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
-                              main.o (__itoa_ncheck)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o) (__utoa_common)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o) (strrev)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                              main.o (__do_clear_bss)
 
 Discarded input sections
 
@@ -18,11 +14,15 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ COMMON         0x00000000        0x0 main.o
  .text          0x00000000        0x0 nokia_5110_lcd.o
  .data          0x00000000        0x0 nokia_5110_lcd.o
  .bss           0x00000000        0x0 nokia_5110_lcd.o
+ .text          0x00000000        0x0 water_symbols.o
+ .data          0x00000000        0x0 water_symbols.o
+ .bss           0x00000000        0x0 water_symbols.o
  .rodata.init_msg_1
-                0x00000000      0x1f8 nokia_5110_lcd.o
+                0x00000000      0x1f8 water_symbols.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -55,15 +55,22 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
 
 Memory Configuration
 
@@ -83,6 +90,7 @@ Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD main.o
 LOAD nokia_5110_lcd.o
+LOAD water_symbols.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -192,7 +200,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x328
+.text           0x00000000      0x2c6
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -235,6 +243,8 @@ END GROUP
  *(.init4)
  .init4         0x00000074       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                 0x00000074                __do_copy_data
+ .init4         0x0000008a       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000008a                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -245,79 +255,69 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000008a        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x0000009a        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x0000008e        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x0000008e                __vector_22
-                0x0000008e                __vector_1
-                0x0000008e                __vector_24
-                0x0000008e                __vector_12
-                0x0000008e                __bad_interrupt
-                0x0000008e                __vector_6
-                0x0000008e                __vector_3
-                0x0000008e                __vector_23
-                0x0000008e                __vector_25
-                0x0000008e                __vector_11
-                0x0000008e                __vector_13
-                0x0000008e                __vector_17
-                0x0000008e                __vector_19
-                0x0000008e                __vector_7
-                0x0000008e                __vector_5
-                0x0000008e                __vector_4
-                0x0000008e                __vector_9
-                0x0000008e                __vector_2
-                0x0000008e                __vector_21
-                0x0000008e                __vector_15
-                0x0000008e                __vector_8
-                0x0000008e                __vector_14
-                0x0000008e                __vector_10
-                0x0000008e                __vector_16
-                0x0000008e                __vector_18
-                0x0000008e                __vector_20
-                0x00000090                . = ALIGN (0x2)
+ .text          0x0000009e        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x0000009e                __vector_22
+                0x0000009e                __vector_1
+                0x0000009e                __vector_24
+                0x0000009e                __vector_12
+                0x0000009e                __bad_interrupt
+                0x0000009e                __vector_6
+                0x0000009e                __vector_3
+                0x0000009e                __vector_23
+                0x0000009e                __vector_25
+                0x0000009e                __vector_11
+                0x0000009e                __vector_13
+                0x0000009e                __vector_17
+                0x0000009e                __vector_19
+                0x0000009e                __vector_7
+                0x0000009e                __vector_5
+                0x0000009e                __vector_4
+                0x0000009e                __vector_9
+                0x0000009e                __vector_2
+                0x0000009e                __vector_21
+                0x0000009e                __vector_15
+                0x0000009e                __vector_8
+                0x0000009e                __vector_14
+                0x0000009e                __vector_10
+                0x0000009e                __vector_16
+                0x0000009e                __vector_18
+                0x0000009e                __vector_20
+                0x000000a0                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x00000090       0x6c main.o
-                0x00000090                main
+ .text.main     0x000000a0       0x60 main.o
+                0x000000a0                main
  .text.LCD_write_byte
-                0x000000fc       0x3e nokia_5110_lcd.o
-                0x000000fc                LCD_write_byte
+                0x00000100       0x3e nokia_5110_lcd.o
+                0x00000100                LCD_write_byte
  .text.LCD_clear
-                0x0000013a       0x2c nokia_5110_lcd.o
-                0x0000013a                LCD_clear
+                0x0000013e       0x2c nokia_5110_lcd.o
+                0x0000013e                LCD_clear
  .text.LCD_init
-                0x00000166       0x8c nokia_5110_lcd.o
-                0x00000166                LCD_init
+                0x0000016a       0x8c nokia_5110_lcd.o
+                0x0000016a                LCD_init
  .text.LCD_set_XY
-                0x000001f2       0x18 nokia_5110_lcd.o
-                0x000001f2                LCD_set_XY
+                0x000001f6       0x18 nokia_5110_lcd.o
+                0x000001f6                LCD_set_XY
  .text.LCD_write_char
-                0x0000020a       0x38 nokia_5110_lcd.o
-                0x0000020a                LCD_write_char
+                0x0000020e       0x38 nokia_5110_lcd.o
+                0x0000020e                LCD_write_char
  .text.LCD_write_english_string
-                0x00000242       0x1a nokia_5110_lcd.o
-                0x00000242                LCD_write_english_string
+                0x00000246       0x1a nokia_5110_lcd.o
+                0x00000246                LCD_write_english_string
  .text.LCD_write_whole_screen
-                0x0000025c       0x3e nokia_5110_lcd.o
-                0x0000025c                LCD_write_whole_screen
+                0x00000260       0x3e nokia_5110_lcd.o
+                0x00000260                LCD_write_whole_screen
  .text.LCD_write_init
-                0x0000029a       0x24 nokia_5110_lcd.o
-                0x0000029a                LCD_write_init
- .text.avr-libc
-                0x000002be       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
-                0x000002be                __itoa_ncheck
- .text.avr-libc
-                0x000002d2       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
-                0x000002d2                __utoa_ncheck
-                0x000002d4                __utoa_common
- .text.avr-libc
-                0x00000304       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
-                0x00000304                strrev
-                0x00000324                . = ALIGN (0x2)
+                0x0000029e       0x24 nokia_5110_lcd.o
+                0x0000029e                LCD_write_init
+                0x000002c2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000324        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000324                _exit
-                0x00000324                exit
+ .fini9         0x000002c2        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000002c2                _exit
+                0x000002c2                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -336,11 +336,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000324        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000002c2        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000328                _etext = .
+                0x000002c6                _etext = .
 
-.data           0x00800100      0x44c load address 0x00000328
+.data           0x00800100      0x4a0 load address 0x000002c6
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -349,32 +349,35 @@ END GROUP
  *(.rodata*)
  .rodata.str1.1
                 0x00800100       0x2b main.o
- .rodata.init_msg_2
-                0x0080012b      0x1f8 nokia_5110_lcd.o
-                0x0080012b                init_msg_2
  .rodata.font6x8
-                0x00800323      0x228 nokia_5110_lcd.o
-                0x00800323                font6x8
+                0x0080012b      0x228 nokia_5110_lcd.o
+                0x0080012b                font6x8
+ .rodata.water_level_img
+                0x00800353       0x54 water_symbols.o
+                0x00800353                water_level_img
+ .rodata.init_msg_2
+                0x008003a7      0x1f8 water_symbols.o
+                0x008003a7                init_msg_2
  *(.gnu.linkonce.r*)
-                0x0080054c                . = ALIGN (0x2)
- *fill*         0x0080054b        0x1 
-                0x0080054c                _edata = .
-                0x0080054c                PROVIDE (__data_end, .)
+                0x008005a0                . = ALIGN (0x2)
+ *fill*         0x0080059f        0x1 
+                0x008005a0                _edata = .
+                0x008005a0                PROVIDE (__data_end, .)
 
-.bss            0x0080054c        0x0
-                [!provide]                PROVIDE (__bss_start, .)
+.bss            0x008005a0        0x0
+                0x008005a0                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
-                [!provide]                PROVIDE (__bss_end, .)
-                0x00000328                __data_load_start = LOADADDR (.data)
-                0x00000774                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008005a0                PROVIDE (__bss_end, .)
+                0x000002c6                __data_load_start = LOADADDR (.data)
+                0x00000766                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080054c        0x0
+.noinit         0x008005a0        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080054c                _end = .
+                0x008005a0                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -419,6 +422,7 @@ END GROUP
  .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 nokia_5110_lcd.o
+ .comment       0x00000030       0x31 water_symbols.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -440,51 +444,58 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x78
+.debug_aranges  0x00000000       0x90
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 main.o
  .debug_aranges
                 0x00000020       0x58 nokia_5110_lcd.o
+ .debug_aranges
+                0x00000078       0x18 water_symbols.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xed4
+.debug_info     0x00000000      0xf14
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0x31b main.o
- .debug_info    0x0000090f      0x5c5 nokia_5110_lcd.o
+ .debug_info    0x000005f4      0x29d main.o
+ .debug_info    0x00000891      0x5ec nokia_5110_lcd.o
+ .debug_info    0x00000e7d       0x97 water_symbols.o
 
-.debug_abbrev   0x00000000      0x949
+.debug_abbrev   0x00000000      0x926
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2      0x1b4 main.o
- .debug_abbrev  0x00000756      0x1f3 nokia_5110_lcd.o
+ .debug_abbrev  0x000005a2      0x143 main.o
+ .debug_abbrev  0x000006e5      0x1f3 nokia_5110_lcd.o
+ .debug_abbrev  0x000008d8       0x4e water_symbols.o
 
-.debug_line     0x00000000      0x650
+.debug_line     0x00000000      0x679
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000134      0x18f main.o
- .debug_line    0x000002c3      0x38d nokia_5110_lcd.o
+ .debug_line    0x00000134      0x186 main.o
+ .debug_line    0x000002ba      0x38d nokia_5110_lcd.o
+ .debug_line    0x00000647       0x32 water_symbols.o
 
-.debug_frame    0x00000000      0x114
+.debug_frame    0x00000000      0x104
  *(.debug_frame)
- .debug_frame   0x00000000       0x34 main.o
- .debug_frame   0x00000034       0xe0 nokia_5110_lcd.o
+ .debug_frame   0x00000000       0x24 main.o
+ .debug_frame   0x00000024       0xe0 nokia_5110_lcd.o
 
-.debug_str      0x00000000      0x4cb
+.debug_str      0x00000000      0x4bf
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x214 main.o
-                                0x252 (size before relaxing)
- .debug_str     0x0000041c       0xaf nokia_5110_lcd.o
-                                0x2ba (size before relaxing)
+ .debug_str     0x00000208      0x220 main.o
+                                0x254 (size before relaxing)
+ .debug_str     0x00000428       0x82 nokia_5110_lcd.o
+                                0x2ca (size before relaxing)
+ .debug_str     0x000004aa       0x15 water_symbols.o
+                                0x15a (size before relaxing)
 
-.debug_loc      0x00000000      0x568
+.debug_loc      0x00000000      0x4df
  *(.debug_loc)
- .debug_loc     0x00000000      0x138 main.o
- .debug_loc     0x00000138      0x430 nokia_5110_lcd.o
+ .debug_loc     0x00000000       0xaf main.o
+ .debug_loc     0x000000af      0x430 nokia_5110_lcd.o
 
 .debug_macinfo
  *(.debug_macinfo)

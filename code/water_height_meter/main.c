@@ -9,10 +9,7 @@
     #define F_CPU 16000000L
 #endif
 
-#include <avr/io.h>
-#include <util/delay.h>
-#include "nokia_5110_lcd.h"
-#include <stdlib.h>
+#include "main.h"
 
 int main(void)
 {
@@ -33,12 +30,12 @@ int main(void)
     /* Replace with your application code */
     uint8_t i = 0;
     
-    char transmit_char[4];
     while (1) 
     {
         LCD_clear();
-        itoa(i, transmit_char, 10);
-        LCD_write_english_string(0, 0, transmit_char);
+        LCD_write_whole_screen(water_level_img, 84, i/10);
+        //itoa(i, transmit_char, 10);
+        //LCD_write_english_string(0, 0, transmit_char);
         _delay_ms(100);
         i++;
     }

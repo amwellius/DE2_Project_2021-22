@@ -7,7 +7,6 @@
 
 #include "nokia_5110_lcd.h"
 #include "english_font.h"
-#include "water_symbols.h"
 
 void LCD_init() 
 {
