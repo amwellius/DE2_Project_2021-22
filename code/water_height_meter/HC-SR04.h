@@ -11,8 +11,8 @@
 
 void init_ultrasonic_sensor();
 
-float get_dist();
-uint16_t get_cnt();
+uint32_t get_dist();
+uint32_t get_cnt();
 
 
 

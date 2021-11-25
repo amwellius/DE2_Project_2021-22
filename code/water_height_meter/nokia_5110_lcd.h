@@ -75,7 +75,7 @@
 #define SDIN_PIN        2
 
 #define SCLK_PORT       PORTB
-#define SCLK_DDR        DDRD
+#define SCLK_DDR        DDRB
 #define SCLK_PIN        1
 
 #endif
@@ -107,7 +107,7 @@ void LCD_write_english_string(unsigned char X,unsigned char Y,char *s);
 void LCD_write_char(unsigned char c);
 void LCD_set_XY(unsigned char X, unsigned char Y);
 void LCD_write_init();
-void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_y);
+void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y);
 
 /* Defines */
 

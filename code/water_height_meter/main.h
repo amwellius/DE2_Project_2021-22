@@ -21,5 +21,6 @@
 #include "nokia_5110_lcd.h"
 #include "HC-SR04.h"
 #include "gpio.h"
+#include <string.h>
 
 #endif /* MAIN_H_ */

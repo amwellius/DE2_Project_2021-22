@@ -101,8 +101,8 @@ void LCD_write_english_string(unsigned char X, unsigned char Y, char *s)
     }
 }
 
-void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_y) {
-    LCD_set_XY(0, (unsigned char) start_y);
+void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y) {
+    LCD_set_XY((unsigned char)start_x, (unsigned char) start_y);
     for (uint16_t i = 0; i < cells_n; i++)
         LCD_write_byte(cells[i], 0);
 }
@@ -111,5 +111,5 @@ void LCD_write_init()
 {
     LCD_clear();
     _delay_ms(1000);
-    LCD_write_whole_screen((unsigned char*) init_msg_2, NUM_OF_CELLS, 0);    
+    LCD_write_whole_screen((unsigned char*) init_msg_2, NUM_OF_CELLS,0, 0);    
 }

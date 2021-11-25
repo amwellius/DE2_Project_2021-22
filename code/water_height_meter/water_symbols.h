@@ -8,7 +8,7 @@
 #ifndef WATER_SYMBOLS_H
 #define WATER_SYMBOLS_H
 
-const unsigned char water_level_img[84];
+const unsigned char water_level_img[44];
 const unsigned char init_msg_1[504];
 const unsigned char init_msg_2[504];
 

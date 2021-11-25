@@ -7,11 +7,11 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#define HCSR_TRIGGER        PD6
+#define HCSR_TRIGGER        PD7
 #define HCSR_TRIGGER_PORT   PORTD
 #define HCSR_TRIGGER_DDR    DDRD
-#define TRIG                PD6
-#define ECHO                PD5
+#define TRIG                PD7
+#define ECHO                PB0
 
 // CPU-speed / Prescale = cycles/sec. 1sec/ freq./sec. = 4 (t= 4us/cycle)
 #define US_PER_COUNT        ((uint32_t)4)
@@ -36,17 +36,17 @@ ISR(TIMER1_COMPA_vect)
 
 ISR(TIMER1_CAPT_vect)
 {
-    static uint16_t rising = 0, falling = 0;                    // For storing of rising/falling data
+    static uint16_t rising = 0, falling = 0;                        // For storing of rising/falling data
     
-    if (TCCR1B & (1 << ICES1))                                  // Check input capture reg PB0
+    if (TCCR1B & (1 << ICES1))                                      // Check input capture reg PB0
     {
-        TCCR1B &= ~(1 << ICES1);                                // Set to falling edge
-        rising = ICR1;                                          // Read value ticks
+        TCCR1B &= ~(1 << ICES1);                                    // Set to falling edge
+        rising = ICR1;                                              // Read value ticks
     } else {
-        TCCR1B |= (1 << ICES1);                                 // Rest to rising edge
-        falling = ICR1;                                         // Read value ticks
-        counts = falling - rising;                              // Calc. difference between start and stop of the pulse
-        dist = (US_PER_COUNT * (uint32_t)counts * 10) / 58;     // Convert to distance (in mm) time in us/58 -> distance in cm time in us/5.8 -> distance in mm
+        TCCR1B |= (1 << ICES1);                                     // Rest to rising edge
+        falling = ICR1;                                             // Read value ticks
+        counts = falling - rising;                                  // Calc. difference between start and stop of the pulse
+        dist = ((US_PER_COUNT * (uint32_t)counts) * 340) / 2000;    // Distance in mm
     }
 }
 
@@ -62,7 +62,7 @@ void init_ultrasonic_sensor()
     TIMSK1 |= (1 << ICIE1) | (1 << OCIE1A);     // Enable timer 1 interrupt + enable OC interrupt
     TCCR1B |= (1 << ICES1);                     
 
-    OCR1A = 17500;                              // Calculate TOP (70ms runtime for one cycle): 16MHz/64 = 25000 count/sec. = 25000/1000 = 2500 count/us / 100*70 = 17500 count/70ms    
+    OCR1A = 17500;                              // Calculate TOP (70ms runtime for one cycle): 16MHz/64 = 250 kcount/sec. = 250k/1k = 250 count/us / 100*70 = 17500 count/70ms    
 
     sei();                                      //activate global interrupt
 }

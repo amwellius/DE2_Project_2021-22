@@ -295,7 +295,7 @@ Wire Wire Line
 Wire Wire Line
 	1700 1350 1700 1450
 Connection ~ 1700 1450
-Text Notes 1200 3300 0    50   ~ 0
+Text Notes 1200 3400 0    50   ~ 0
 HC-SR04 connector
 $Comp
 L my_power:VCC #PWR0108
