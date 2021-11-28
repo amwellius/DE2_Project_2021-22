@@ -75,9 +75,9 @@ As main programming board is used **Arduino Uno**. For representing results was 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/water_level_sensor.pdf)
 
 &nbsp;
-![figure](Images/water_level_sensor.png){:height="50%" width="50%"}
-![figure](Images/water_level_sensor.png){:class="img-responsive"}
-![figure](Images/water_level_sensor.png){:height="700px" width="400px"}
+![figure](Images/water_level_sensor.png)
+<img src="Images/water_level_sensor.png" width="100"
+
 &nbsp;
 
 **TIEZ ASI RADSEJ VLASTNY OBRAZOK**
