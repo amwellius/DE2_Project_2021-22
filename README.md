@@ -78,6 +78,11 @@ Connected to analog input pin, GND and Vcc=5 V. According table below is used in
 
    | <=100 | System working properly |
    | >100  | System malfunction      |
+   
+   | **LED color** | **Supply voltage** |
+   | :-: | :-: |
+   | red | 5&nbsp;V |
+   | blue | 5&nbsp;V |
 
 
 &nbsp;
