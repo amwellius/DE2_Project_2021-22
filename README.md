@@ -70,6 +70,20 @@ As main programming board is used **Arduino Uno**. For representing results was 
 ![figure](Images/HCSR04.png)
 &nbsp;
 
+
+
+&nbsp;
+
+**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
+
+Main sensor (one of **two???**) for measuring the water level of the tank. After entering its dimensions (or volume), the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40MHz signal. This will be given by *ECHO pin*, so received value will the time the wave travelled to the watel level and back to the sensor. Final distance can be obtained by this equation: 
+
+&nbsp;
+![equation](Images/HCSR04_equation.gif)
+&nbsp;
+
+Where **t** is the received value on **ECHO pin** and *0.034* cames from ste speed of soun *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devidec by two. 
+
 ### EXTRA Water Lever Sensor
 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/water_level_sensor.pdf)
@@ -85,20 +99,6 @@ Connected to analog input pin, GND and Vcc=5 V. Its usage describes table below.
 
 &nbsp;
 ![figure](Images/water_level_sensor.png)
-
-&nbsp;
-
-**TIEZ ASI RADSEJ VLASTNY OBRAZOK**
-
-Main sensor (one of **two???**) for measuring the water level of the tank. After entering its dimensions (or volume), the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40MHz signal. This will be given by *ECHO pin*, so received value will the time the wave travelled to the watel level and back to the sensor. Final distance can be obtained by this equation: 
-
-&nbsp;
-![equation](Images/HCSR04_equation.gif)
-&nbsp;
-
-Where **t** is the received value on **ECHO pin** and *0.034* cames from ste speed of soun *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devidec by two. 
-
-
 
 
 <a name="libs"></a>
