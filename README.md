@@ -73,10 +73,16 @@ As main programming board is used **Arduino Uno**. For representing results was 
 ### EXTRA Water Lever Sensor
 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/water_level_sensor.pdf)
+It is situated.... <br/>
+Connected to analog input pin, GND and Vcc=5 V. According table below is used in the code. <br/>
+|-------|-------------------------|
+| <=100 | System working properly |
+|-------|-------------------------|
+| >100  | System malfunction      |
+|-------|-------------------------|
 
 &nbsp;
 ![figure](Images/water_level_sensor.png)
-<a href="url"><img src="https://github.com/amwellius/DE2_Project_2021-22/blob/main/Images/water_level_sensor.png" align="left" height="48" width="48" ></a>
 
 &nbsp;
 
