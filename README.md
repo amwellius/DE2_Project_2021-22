@@ -76,7 +76,7 @@ As main programming board is used **Arduino Uno**. For representing results was 
 
 &nbsp;
 ![figure](Images/water_level_sensor.png)
-<img src="Images/water_level_sensor.png" width="100"
+<a href="url"><img src="https://github.com/amwellius/DE2_Project_2021-22/blob/main/Images/water_level_sensor.png" align="left" height="48" width="48" ></a>
 
 &nbsp;
 
