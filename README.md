@@ -76,6 +76,8 @@ As main programming board is used **Arduino Uno**. For representing results was 
 
 &nbsp;
 ![figure](Images/water_level_sensor.png){:height="50%" width="50%"}
+![figure](Images/water_level_sensor.png){:class="img-responsive"}
+![figure](Images/water_level_sensor.png){:height="700px" width="400px"}
 &nbsp;
 
 **TIEZ ASI RADSEJ VLASTNY OBRAZOK**
