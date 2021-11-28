@@ -25,11 +25,22 @@ Link to this file in your GitHub repository:
 
 ## Project objectives
 
-Write your text here.
+This simple but useful application will help you to fully control your water tank (not only!) in the garden. Do you want to know how much water left? Do you want to replenish the tank? Or are you interested in controlling your own, independent application based on the volume left in the tank? <br\>
+No problem! <br\>
+With this water tank controller you will be able to:
+- know current water level in centimeters, percentage and liters,
+- see maximum volume of the tank,
+- use relays to control DC fans, pump to replenish the tank, irrigation control, windows opening and more,
+- prevent owerflowing the tank with extra sensor,
+- see graphic representation of the water level.
+
+
 
 <a name="hardware"></a>
 
 ## Hardware description
+
+As main programming board is used **Arduino Uno**. For representing results was chosen **Nokia 5110 LCD display** and several **LEDs** and **Relays** (optional). Main water level sensor is ultraonic **HC-SR04**. There is one extra sensor used as backup to prevent overflowing the tank or detecting filth (leaves, flowers, pollen, ...) in the tank.
 
 ### Arduino Uno + breadboard 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/ATMega_328P_datasheet.pdf)
@@ -57,6 +68,14 @@ Write your text here.
 
 &nbsp;
 ![figure](Images/HCSR04.png)
+&nbsp;
+
+### EXTRA Water Lever Sensor
+
+[Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/water_level_sensor.pdf)
+
+&nbsp;
+![figure](Images/water_level_sensor.png){:height="50%" width="50%"}
 &nbsp;
 
 **TIEZ ASI RADSEJ VLASTNY OBRAZOK**
