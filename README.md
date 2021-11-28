@@ -76,8 +76,8 @@ As main programming board is used **Arduino Uno**. For representing results was 
 It is situated.... <br/>
 Connected to analog input pin, GND and Vcc=5 V. According table below is used in the code. <br/>
 
-| <=100 | System working properly |
-| >100  | System malfunction      |
+   | <=100 | System working properly |
+   | >100  | System malfunction      |
 
 
 &nbsp;
