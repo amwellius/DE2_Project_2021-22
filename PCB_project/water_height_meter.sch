@@ -551,6 +551,55 @@ Wire Wire Line
 	1500 2800 3700 2800
 Wire Wire Line
 	3700 2800 3700 2450
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 61A5509C
+P 1250 5500
+F 0 "J?" H 1142 5175 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 1142 5266 50  0000 C CNN
+F 2 "" H 1250 5500 50  0001 C CNN
+F 3 "~" H 1250 5500 50  0001 C CNN
+	1    1250 5500
+	-1   0    0    1   
+$EndComp
+Text Notes 1050 5750 0    50   ~ 0
+Nokia 5110 LCD connector
+$Comp
+L my_power:VCC #PWR?
+U 1 1 61A57247
+P 2050 5400
+F 0 "#PWR?" H 2050 5250 50  0001 C CNN
+F 1 "VCC" V 2050 5600 50  0000 C CNN
+F 2 "" H 2050 5400 50  0001 C CNN
+F 3 "" H 2050 5400 50  0001 C CNN
+	1    2050 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 5400 2050 5400
+Wire Wire Line
+	1450 5500 2050 5500
+$Comp
+L my_power:GND #PWR?
+U 1 1 61A5BB9C
+P 2050 5500
+F 0 "#PWR?" H 2050 5250 50  0001 C CNN
+F 1 "GND" V 2050 5300 50  0000 C CNN
+F 2 "" H 2050 5500 50  0001 C CNN
+F 3 "" H 2050 5500 50  0001 C CNN
+	1    2050 5500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 5600 6250 2350
+Wire Wire Line
+	5750 2350 6250 2350
+Wire Wire Line
+	1450 5600 6250 5600
+Text Label 5800 2350 0    50   ~ 0
+RAIN_S_AN
+Text Label 1550 5600 0    50   ~ 0
+RAIN_S_AN
 Wire Bus Line
 	4100 2750 4100 3450
 Wire Bus Line
