@@ -14,7 +14,7 @@ int main(void)
     init_ultrasonic_sensor();   // Ultrasonic init
     
     // show init screen, sleep 5s
-    LCD_write_init();  
+    //LCD_write_init();  
     //LCD_write_whole_screen((unsigned char *)init_msg_1, 504, 0);
     //_delay_ms(2000);
     LCD_clear();
@@ -55,55 +55,67 @@ int main(void)
         //LCD_write_whole_screen((unsigned char*)water_level_img, 44, 40, 2);
         
         uint16_t x = 84-15;
-        uint16_t y = 0;
+        uint16_t y = 1;
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 10 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_10, 14, 70, x, y);        
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 20 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_20, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 30 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_30, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 40 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_40, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 50 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_50, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 60 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_60, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 70 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_70, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 80 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_80, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 90 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_90, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 100 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_100, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Water at 0 %");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_default, 14, 70, x, y);
         _delay_ms(300);
         
         LCD_clear();
+        LCD_write_english_string(0, 0, "Sensor error!");
         LCD_write_bytes_xy_defined_width((unsigned char*)water_level_error, 14, 70, x, y);
-        _delay_ms(300);
+        _delay_ms(1000);
         
         // Getting data from extra sensor 
         /* 

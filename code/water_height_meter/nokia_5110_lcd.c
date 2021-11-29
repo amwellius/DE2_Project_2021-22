@@ -115,7 +115,7 @@ void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint
     
     uint16_t _width = 0;
     for (uint16_t i = 0; i < size; i++) {
-        LCD_write_byte(~cells[i], 0);
+        LCD_write_byte(cells[i], 0);
         _width++;
         if (_width == width) {
             LCD_set_XY(x, ++y);
