@@ -29,15 +29,13 @@ int main(void)
         // Tank Volume
         //**Enter values in cm !
         
-        uint32_t tank_x = 100;
+        /*uint32_t tank_x = 100;
         uint32_t tank_y = 100;
         uint32_t tank_z = 80;       // height
         
         uint32_t tank_actual_volume;
         uint32_t tank_volume = tank_x * tank_y * tank_z * 0.001;    // in liters !
-        uint32_t tank_max_height = tank_z * 0.90        // Main sensor is mounted 4cm above tank_max_height
-        
-        
+        uint32_t tank_max_height = tank_z * 0.90;                   // Main sensor is mounted 4cm above tank_max_height
         
         // Getting distance
         LCD_clear();                                    // Clear lcd
@@ -52,10 +50,59 @@ int main(void)
         LCD_write_english_string(6*str_length, 0, ",");
         LCD_write_english_string(6*(str_length+1), 0, distance_str);
         uint16_t str_2_length = strlen(distance_str);     // Get str len
-        LCD_write_english_string(6*(str_length+str_2_length+1), 0, " cm");
+        LCD_write_english_string(6*(str_length+str_2_length+1), 0, " cm");*/
         
-        LCD_write_whole_screen((unsigned char*)water_level_img, 44, 40, 2);
+        //LCD_write_whole_screen((unsigned char*)water_level_img, 44, 40, 2);
         
+        uint16_t x = 84-15;
+        uint16_t y = 0;
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_10, 14, 70, x, y);        
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_20, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_30, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_40, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_50, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_60, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_70, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_80, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_90, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_100, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_default, 14, 70, x, y);
+        _delay_ms(300);
+        
+        LCD_clear();
+        LCD_write_bytes_xy_defined_width((unsigned char*)water_level_error, 14, 70, x, y);
         _delay_ms(300);
         
         // Getting data from extra sensor 
@@ -64,7 +111,7 @@ int main(void)
             >100     = DIRTY/ERROR                    
         */
         
-        if (extra_sens >100 ){
+        /*if (extra_sens >100 ){
             LCD_write_english_string(0, 0, "Dirty water or main sensor problem!");
             //vypise ERORR a ukaze znak water_lever_error
         }            
@@ -133,8 +180,7 @@ int main(void)
                 LCD_clear();
                 LCD_write_english_string(0, 0, "ERROR: Check whole system!");
             }
-        }    
+        }    */
      }
-        }
 }
 

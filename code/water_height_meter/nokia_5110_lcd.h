@@ -108,6 +108,7 @@ void LCD_write_char(unsigned char c);
 void LCD_set_XY(unsigned char X, unsigned char Y);
 void LCD_write_init();
 void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y);
+void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y);
 
 /* Defines */
 

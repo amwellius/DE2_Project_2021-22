@@ -107,6 +107,23 @@ void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t sta
         LCD_write_byte(cells[i], 0);
 }
 
+// width in cells (vertical 1bit wide lines)
+// size of whole array in bytes
+void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y)
+{
+    LCD_set_XY(x, y);
+    
+    uint16_t _width = 0;
+    for (uint16_t i = 0; i < size; i++) {
+        LCD_write_byte(~cells[i], 0);
+        _width++;
+        if (_width == width) {
+            LCD_set_XY(x, ++y);
+            _width = 0;
+        }        
+    }        
+}
+
 void LCD_write_init()
 {
     LCD_clear();
