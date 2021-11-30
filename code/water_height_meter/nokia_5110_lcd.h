@@ -104,11 +104,14 @@ void LCD_clear();
 void LCD_init();
 void LCD_write_byte(unsigned char dat, unsigned char command);
 void LCD_write_english_string(unsigned char X,unsigned char Y,char *s);
+void LCD_write_english_string_continue(char *s);
+void LCD_write_english_string_continue_precise(char *s, uint16_t data_len);
 void LCD_write_char(unsigned char c);
 void LCD_set_XY(unsigned char X, unsigned char Y);
 void LCD_write_init();
 void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y);
 void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y);
+
 
 /* Defines */
 

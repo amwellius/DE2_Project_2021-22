@@ -101,6 +101,27 @@ void LCD_write_english_string(unsigned char X, unsigned char Y, char *s)
     }
 }
 
+// not safe
+void LCD_write_english_string_continue(char *s)
+{
+    while (*s)
+    {
+        LCD_write_char(*s);
+        s++;
+    }    
+}
+
+// safe
+void LCD_write_english_string_continue_precise(char *s, uint16_t data_len)
+{
+    while (*s)
+    {
+        LCD_write_char(*s);
+        s++;
+        if (s >= data_len) return;
+    }
+}
+
 void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y) {
     LCD_set_XY((unsigned char)start_x, (unsigned char) start_y);
     for (uint16_t i = 0; i < cells_n; i++)
@@ -127,6 +148,6 @@ void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint
 void LCD_write_init()
 {
     LCD_clear();
-    _delay_ms(1000);
-    LCD_write_whole_screen((unsigned char*) init_msg_2, NUM_OF_CELLS,0, 0);    
+    LCD_write_bytes_xy_defined_width((unsigned char*) init_msg_1, 68, 340, 8, 1); 
+    _delay_ms(1000);   
 }

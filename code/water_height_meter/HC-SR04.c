@@ -16,8 +16,8 @@
 // CPU-speed / Prescale = cycles/sec. 1sec/ freq./sec. = 4 (t= 4us/cycle)
 #define US_PER_COUNT        ((uint32_t)4)
 
-uint16_t counts;
-uint32_t dist;
+uint16_t counts = 0;
+uint32_t dist = 0;
 
 ISR(TIMER1_COMPA_vect)
 {
