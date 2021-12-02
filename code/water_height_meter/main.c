@@ -27,6 +27,7 @@ const char *percentage = " %";
 // X-Y coordinates of bucket
 const uint16_t bucket_x = 84-15;
 const uint16_t bucket_y = 1;
+uint16_t value = 0;             // ADC value
     
 const char *all_water_states[] = {water_level_default, water_level_10, water_level_20,
                                   water_level_30, water_level_40, water_level_50,
@@ -36,6 +37,8 @@ const char *all_water_states[] = {water_level_default, water_level_10, water_lev
 char water_level_perc_str[] = "00";
 
 void test_screen();
+void relay_init();
+void adc_init();
 
 int main(void)
 {
@@ -47,6 +50,12 @@ int main(void)
     
     // Test controlls like in car
     test_screen();
+    
+    // Init relay
+    relay_init();
+    
+    // Init ADC
+    adc_init();
     
     /* Replace with your application code */
     uint32_t distance_val = 0;
@@ -64,7 +73,7 @@ int main(void)
     {   
         // Getting distance
         LCD_clear();                                                            // Clear lcd
-        distance_val = ((uint32_t) get_dist());                                 // Get distance in mm //-40 lebo je to 4cm nad hladinou
+        distance_val = ((uint32_t) get_dist_avg());                                 // Get distance in mm //-40 lebo je to 4cm nad hladinou
         distance_val -= 40;
         distance_val /= 10;
         tank_actual_volume = ((TANK_Z - distance_val) * TANK_X * TANK_Y) / 1000;
@@ -86,9 +95,13 @@ int main(void)
             LCD_write_english_string_continue("error");
             
             // display state
-            itoa(percentage, distance_str, 10);
-            LCD_write_english_string(0, 3, "System:");
-            LCD_write_english_string(0, 4, "Error");
+            if (value < 860) {
+                LCD_write_english_string(0, 3, "Status:");
+                LCD_write_english_string(0, 4, "Overflow");
+            } else {
+                LCD_write_english_string(0, 3, "Status:");
+                LCD_write_english_string(0, 4, "Error");
+            }
             
             LCD_write_bytes_xy_defined_width((unsigned char*)all_water_states[11], 14, 70, bucket_x, bucket_y);
         } else {
@@ -130,11 +143,14 @@ int main(void)
             LCD_write_english_string_continue(" %");
             
             // display state
-            itoa(percentage, distance_str, 10);
-            LCD_write_english_string(0, 3, "System:");
-            LCD_write_english_string(0, 4, "OK");
+            if (value < 860) {
+                LCD_write_english_string(0, 3, "Status:");
+                LCD_write_english_string(0, 4, "Overflow");
+            } else {
+                LCD_write_english_string(0, 3, "Status:");
+                LCD_write_english_string(0, 4, "OK");
+            }            
         }
-        
         //all_water_states;
         _delay_ms(300);                                                         // refresh rate
      }
@@ -169,4 +185,65 @@ void test_screen()
     }
     LCD_clear();
     return;
+}
+
+// Interrupt Service Routine attached to INT0 vector
+ISR(INT0_vect)
+{
+    PORTC ^= (1 << 5);
+}
+
+// Start ADC conversion at precise interval
+ISR(TIMER0_OVF_vect)
+{
+    // Start ADC conversion
+    ADCSRA |= (1<<ADSC);
+}
+
+/**********************************************************************
+ * Function: ADC complete interrupt
+ * Purpose:  Display value on LCD and send it to UART.
+ **********************************************************************/
+ISR(ADC_vect)
+{
+    value = ADC;    // Copy ADC result to 16-bit variable 
+}
+
+void relay_init()
+{
+    // Set port PD2 to input pullup
+    DDRD &= ~(1 << 2);
+    PORTD |= (1 << 2);
+    
+    EICRA |= (1 << ISC01);    // Trigger on falling edge
+    EIMSK |= (1 << INT0);     // Enable external interrupt INT0
+    
+    // Set realy to open
+    DDRC |= (1 << 5);
+    PORTC |= (1 << 5);
+}
+
+void adc_init()
+{
+    // Configure ADC to convert PC0[A0] analog value
+    // Set ADC reference to AVcc
+    ADMUX &= ~(1<<REFS1); ADMUX |= (1<<REFS0);
+    
+    // Set input channel to ADC0
+    ADMUX &= ~((1<<MUX3) | (1<<MUX2) | (1<<MUX1) | (1<<MUX0));
+    
+    // Enable ADC module
+    ADCSRA |= (1<<ADEN);
+    
+    // Enable conversion complete interrupt
+    ADCSRA |= (1<<ADIE);
+    
+    // Set clock prescaler to 128
+    ADCSRA |= (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+    
+    // Configure 16-bit Timer/Counter1 to start ADC conversion
+    // Set prescaler to 262 ms and enable overflow interrupt
+    TIM0_overflow_interrupt_enable();
+    TIM0_overflow_16384us();
+    sei();
 }

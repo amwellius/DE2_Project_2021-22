@@ -26,6 +26,26 @@ X ~ 3 300 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Conn_01x02_Female
+#
+DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x02_Female" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+P 2 1 1 6 -50 -100 -20 -100 N
+P 2 1 1 6 -50 0 -20 0 N
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Conn_01x03_Female
 #
 DEF Connector_Conn_01x03_Female J 0 40 Y N 1 F N
@@ -171,6 +191,26 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Diode_1N4448
+#
+DEF Diode_1N4448 D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Diode_1N4448" 0 -100 50 H V C CNN
+F2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS 1N4448 1N4149 1N4151 1N914 BA243 BA244 BA282 BA283 BAV17 BAV18 BAV19 BAV20 BAV21 BAW75 BAW76 BAY93
+$FPLIST
+ D*DO?35*
+$ENDFPLIST
+DRAW
+P 2 0 1 10 -50 50 -50 -50 N
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 10 50 50 50 -50 -50 0 50 50 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Diode_BZD27Cxx
 #
 DEF Diode_BZD27Cxx D 0 20 N N 1 F N
@@ -237,6 +277,41 @@ X A0 9 500 0 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
+# Relay_ADW11
+#
+DEF Relay_ADW11 K 0 20 Y Y 1 F N
+F0 "K" 450 150 50 H V C CNN
+F1 "Relay_ADW11" 550 50 50 H V C CNN
+F2 "Relay_THT:Relay_1P1T_NO_10x24x18.8mm_Panasonic_ADW11xxxxW_THT" 1325 -50 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Relay*1P1T*NO*Panasonic*ADW11xxxxW*
+$ENDFPLIST
+DRAW
+T 0 -120 -140 40 0 1 1 R+ Normal 0 C C
+T 0 -120 140 40 0 1 1 S+ Normal 0 C C
+S -400 200 400 -200 1 1 10 f
+S -325 75 -75 -75 1 1 10 N
+P 2 1 1 10 -300 -75 -100 75 N
+P 2 1 1 0 -200 -200 -200 -75 N
+P 2 1 1 0 -200 200 -200 75 N
+P 2 1 1 10 -75 0 -50 0 N
+P 2 1 1 10 -25 0 0 0 N
+P 2 1 1 10 25 0 50 0 N
+P 2 1 1 10 25 0 50 0 N
+P 2 1 1 10 75 0 100 0 N
+P 2 1 1 10 125 0 150 0 N
+P 2 1 1 20 200 -100 125 150 N
+P 2 1 1 0 200 -100 200 -200 N
+P 2 1 1 0 300 150 300 200 N
+P 4 1 1 0 300 150 300 100 275 125 300 150 N
+X ~ 1 -200 300 100 D 50 50 1 1 P
+X ~ 3 300 300 100 D 50 50 1 1 P
+X ~ 5 200 -300 100 U 50 50 1 1 P
+X ~ 6 -200 -300 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Transistor_FET_DMG2301L
 #
 DEF Transistor_FET_DMG2301L Q 0 20 Y N 1 F N
@@ -295,6 +370,36 @@ P 2 0 1 0 0 50 0 110 N
 P 2 0 1 0 100 0 70 0 N
 X ~ 1 -200 0 100 R 50 50 1 1 P
 X ~ 2 200 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dk_Transistors-Bipolar-BJT-Single_2N2222A
+#
+DEF dk_Transistors-Bipolar-BJT-Single_2N2222A Q 0 0 Y Y 1 F N
+F0 "Q" -126 166 60 H V L CNN
+F1 "dk_Transistors-Bipolar-BJT-Single_2N2222A" 206 0 60 V V C CNN
+F2 "digikey-footprints:TO-18-3" 200 200 60 H I L CNN
+F3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221A.PDF" 200 300 60 H I L CNN
+F4 "2N2222ACS-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "2N2222A" 200 500 60 H I L CNN "MPN"
+F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
+F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
+F8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221A.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/central-semiconductor-corp/2N2222A/2N2222ACS-ND/4806845" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "TRANS NPN 40V 0.8A TO-18" 200 1000 60 H I L CNN "Description"
+F11 "Central Semiconductor Corp" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+C 0 0 128 0 1 0 f
+P 2 0 1 0 -150 0 -100 0 N
+P 2 0 1 0 -140 0 0 0 N
+P 2 0 1 0 0 -50 100 -100 N
+P 2 0 1 0 0 50 100 100 N
+P 2 0 1 0 0 100 0 -100 N
+P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X B 2 -200 0 100 R 50 50 1 1 I
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

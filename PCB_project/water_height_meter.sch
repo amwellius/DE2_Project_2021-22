@@ -600,6 +600,224 @@ Text Label 5800 2350 0    50   ~ 0
 RAIN_S_AN
 Text Label 1550 5600 0    50   ~ 0
 RAIN_S_AN
+$Comp
+L Relay:ADW11 K?
+U 1 1 61A8ACE5
+P 7650 3250
+F 0 "K?" H 8080 3296 50  0000 L CNN
+F 1 "ADW11" H 8080 3205 50  0000 L CNN
+F 2 "Relay_THT:Relay_1P1T_NO_10x24x18.8mm_Panasonic_ADW11xxxxW_THT" H 8975 3200 50  0001 C CNN
+F 3 "https://www.panasonic-electric-works.com/pew/es/downloads/ds_dw_hl_en.pdf" H 7650 3250 50  0001 C CNN
+	1    7650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:2N2222A Q?
+U 1 1 61A93143
+P 7350 4000
+F 0 "Q?" H 7538 4053 60  0000 L CNN
+F 1 "2N2222A" H 7538 3947 60  0000 L CNN
+F 2 "digikey-footprints:TO-18-3" H 7550 4200 60  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221A.PDF" H 7550 4300 60  0001 L CNN
+F 4 "2N2222ACS-ND" H 7550 4400 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N2222A" H 7550 4500 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 7550 4600 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 7550 4700 60  0001 L CNN "Family"
+F 8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221A.PDF" H 7550 4800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/central-semiconductor-corp/2N2222A/2N2222ACS-ND/4806845" H 7550 4900 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.8A TO-18" H 7550 5000 60  0001 L CNN "Description"
+F 11 "Central Semiconductor Corp" H 7550 5100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7550 5200 60  0001 L CNN "Status"
+	1    7350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3800 7450 3650
+$Comp
+L Device:R R?
+U 1 1 61A99FB5
+P 7450 4550
+F 0 "R?" H 7520 4596 50  0000 L CNN
+F 1 "1k" H 7520 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7380 4550 50  0001 C CNN
+F 3 "~" H 7450 4550 50  0001 C CNN
+	1    7450 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L my_power:GND #PWR?
+U 1 1 61A99FBB
+P 7450 4800
+F 0 "#PWR?" H 7450 4550 50  0001 C CNN
+F 1 "GND" H 7455 4627 50  0000 C CNN
+F 2 "" H 7450 4800 50  0001 C CNN
+F 3 "" H 7450 4800 50  0001 C CNN
+	1    7450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 4800 7450 4700
+$Comp
+L Device:R R?
+U 1 1 61A9FBC2
+P 6900 4000
+F 0 "R?" V 7000 4000 50  0000 L CNN
+F 1 "1k" V 6900 3950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6830 4000 50  0001 C CNN
+F 3 "~" H 6900 4000 50  0001 C CNN
+	1    6900 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 4400 7450 4200
+Wire Wire Line
+	7150 4000 7050 4000
+$Comp
+L Diode:1N4448 D?
+U 1 1 61AA9270
+P 6850 3250
+F 0 "D?" V 6804 3330 50  0000 L CNN
+F 1 "1N4448" V 6895 3330 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6850 3075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6850 3250 50  0001 C CNN
+	1    6850 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 2850 6450 4000
+Wire Wire Line
+	5750 2850 6450 2850
+Wire Wire Line
+	6450 4000 6750 4000
+Text Label 5800 2850 0    50   ~ 0
+RELAY
+Wire Wire Line
+	6850 3400 6850 3650
+Wire Wire Line
+	6850 3650 7450 3650
+Connection ~ 7450 3650
+Wire Wire Line
+	7450 3650 7450 3550
+Wire Wire Line
+	6850 3100 6850 2850
+Wire Wire Line
+	6850 2850 7450 2850
+Wire Wire Line
+	7450 2850 7450 2950
+Connection ~ 7450 2850
+$Comp
+L my_power:+9V #PWR?
+U 1 1 61ABA2C4
+P 7450 2600
+F 0 "#PWR?" H 7450 2450 50  0001 C CNN
+F 1 "+9V" H 7465 2773 50  0000 C CNN
+F 2 "" H 7450 2600 50  0001 C CNN
+F 3 "" H 7450 2600 50  0001 C CNN
+	1    7450 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2600 7450 2850
+Wire Wire Line
+	7950 2950 7950 2750
+Wire Wire Line
+	7850 3550 7850 3750
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 61AC1BA3
+P 8900 2750
+F 0 "J?" H 8928 2726 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 8928 2635 50  0000 L CNN
+F 2 "" H 8900 2750 50  0001 C CNN
+F 3 "~" H 8900 2750 50  0001 C CNN
+	1    8900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2750 8700 2750
+Wire Wire Line
+	8500 3750 8500 2850
+Wire Wire Line
+	8500 2850 8700 2850
+Wire Wire Line
+	7850 3750 8500 3750
+Text Notes 8700 3050 0    50   ~ 0
+Relay to pump
+$Comp
+L dk_Pushbutton-Switches:GPTS203211B S?
+U 1 1 61ACDE79
+P 3100 1950
+F 0 "S?" H 3100 2225 50  0000 C CNN
+F 1 "GPTS203211B" H 3100 2134 50  0000 C CNN
+F 2 "digikey-footprints:PushButton_12x12mm_THT_GPTS203211B" H 3300 2150 50  0001 L CNN
+F 3 "http://switches-connectors-custom.cwind.com/Asset/GPTS203211BR2.pdf" H 3300 2250 60  0001 L CNN
+F 4 "CW181-ND" H 3300 2350 60  0001 L CNN "Digi-Key_PN"
+F 5 "GPTS203211B" H 3300 2450 60  0001 L CNN "MPN"
+F 6 "Switches" H 3300 2550 60  0001 L CNN "Category"
+F 7 "Pushbutton Switches" H 3300 2650 60  0001 L CNN "Family"
+F 8 "http://switches-connectors-custom.cwind.com/Asset/GPTS203211BR2.pdf" H 3300 2750 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cw-industries/GPTS203211B/CW181-ND/3190590" H 3300 2850 60  0001 L CNN "DK_Detail_Page"
+F 10 "SWITCH PUSHBUTTON SPST 1A 30V" H 3300 2950 60  0001 L CNN "Description"
+F 11 "CW Industries" H 3300 3050 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3300 3150 60  0001 L CNN "Status"
+	1    3100 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1950 2800 1950
+$Comp
+L my_power:GND #PWR?
+U 1 1 61ACDE87
+P 2800 2450
+F 0 "#PWR?" H 2800 2200 50  0001 C CNN
+F 1 "GND" H 2805 2277 50  0000 C CNN
+F 2 "" H 2800 2450 50  0001 C CNN
+F 3 "" H 2800 2450 50  0001 C CNN
+	1    2800 2450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2450 2800 2400
+Text Label 4200 1950 0    50   ~ 0
+RELAY_OPEN
+$Comp
+L Device:C C?
+U 1 1 61AD3EE7
+P 3400 2200
+F 0 "C?" H 3515 2246 50  0000 L CNN
+F 1 "100n" H 3515 2155 50  0000 L CNN
+F 2 "" H 3438 2050 50  0001 C CNN
+F 3 "~" H 3400 2200 50  0001 C CNN
+	1    3400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61AD44AA
+P 3750 1950
+F 0 "R?" V 3800 2050 50  0000 L CNN
+F 1 "1k" V 3750 1900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3680 1950 50  0001 C CNN
+F 3 "~" H 3750 1950 50  0001 C CNN
+	1    3750 1950
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3300 1950 3400 1950
+Wire Wire Line
+	3400 1950 3400 2050
+Wire Wire Line
+	3400 1950 3600 1950
+Connection ~ 3400 1950
+Wire Wire Line
+	3900 1950 4750 1950
+Wire Wire Line
+	3400 2350 3400 2400
+Wire Wire Line
+	3400 2400 2800 2400
+Connection ~ 2800 2400
+Wire Wire Line
+	2800 1950 2800 2400
 Wire Bus Line
 	4100 2750 4100 3450
 Wire Bus Line

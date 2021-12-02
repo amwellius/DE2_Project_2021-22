@@ -16,11 +16,14 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdlib.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
 #include "water_symbols.h"
 #include "nokia_5110_lcd.h"
 #include "HC-SR04.h"
 #include "gpio.h"
+#include "timer.h"
 #include <string.h>
 
 #endif /* MAIN_H_ */

@@ -18,6 +18,7 @@
 
 uint16_t counts = 0;
 uint32_t dist = 0;
+uint32_t dist_vals[10];
 
 ISR(TIMER1_COMPA_vect)
 {
@@ -47,6 +48,11 @@ ISR(TIMER1_CAPT_vect)
         falling = ICR1;                                             // Read value ticks
         counts = falling - rising;                                  // Calc. difference between start and stop of the pulse
         dist = ((US_PER_COUNT * (uint32_t)counts) * 340) / 2000;    // Distance in mm
+        
+        for (int8_t i = 9; i >= 1; i--) {
+            dist_vals[i] = dist_vals[i-1];
+        }
+        dist_vals[0] = dist;
     }
 }
 
@@ -64,12 +70,26 @@ void init_ultrasonic_sensor()
 
     OCR1A = 17500;                              // Calculate TOP (70ms runtime for one cycle): 16MHz/64 = 250 kcount/sec. = 250k/1k = 250 count/us / 100*70 = 17500 count/70ms    
 
+    for (uint8_t i = 0; i < 10; i++) {
+        dist_vals[i] = 0;
+    }
+
     sei();                                      //activate global interrupt
 }
 
 uint32_t get_dist()
 {
     return dist;                                // return distance in mm
+}
+
+uint32_t get_dist_avg()
+{
+    uint32_t vals_sum = 0;
+    
+    for (int8_t i = 0; i < 10; i++) {
+        vals_sum += dist_vals[i];
+    }
+    return vals_sum / 10;                                // return distance in mm
 }
 
 uint16_t get_cnt()

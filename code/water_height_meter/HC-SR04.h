@@ -12,8 +12,7 @@
 void init_ultrasonic_sensor();
 
 uint32_t get_dist();
+uint32_t get_dist_avg();
 uint32_t get_cnt();
-
-
 
 #endif /* HC-SR04_H_ */
