@@ -9,6 +9,7 @@
 #include "timer.h"          // Timer library for AVR-GCC
 #include <stdlib.h>         // C library. Needed for conversion function
 #include "gpio.h"
+#include "uart.h" 
 /* Function definitions ----------------------------------------------*/
 /**********************************************************************
  * Function: Main function where the program execution begins
@@ -35,6 +36,7 @@ int main(void)
     // Set prescaler to 262 ms and enable overflow interrupt
     TIM1_overflow_interrupt_enable();
     TIM1_overflow_262ms();
+    uart_init(UART_BAUD_SELECT(9600, F_CPU));
     sei();
 
     // Infinite loop
@@ -70,14 +72,21 @@ ISR(ADC_vect)
     // WRITE YOUR CODE HERE
     
     uint16_t value = 0;
+    
+
     value = ADC;    // Copy ADC result to 16-bit variable 
-    if(value >= 500){
+    
+
+    if(value >= 870){
+        
         
         _delay_ms(500);
-        GPIO_write_high(&PORTB, LED);
+        GPIO_write_low(&PORTB, LED);
+        
         }else{
-   
         _delay_ms(500);
-        GPIO_write_low(&PORTB, LED);         
+        GPIO_write_high(&PORTB, LED);
+          
+    
     }
 }
