@@ -93,8 +93,8 @@ Connected to analog input pin, GND and Vcc=5 V. Its usage describes table below.
    
    | **Value** | **Results in** |
    | :-: | :-: |
-   | <=100 | System working properly |
-   | >100 | System malfunction! |
+   | <=850 | System working properly |
+   | >850 | System malfunction! |
 
 
 &nbsp;
