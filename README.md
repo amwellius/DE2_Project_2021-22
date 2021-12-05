@@ -3,10 +3,12 @@
 
 ### Team members
 
-- **Samuel Košík**   &nbsp;&nbsp;&nbsp;&nbsp;              *id=221056*   &nbsp;&nbsp;    (Ochre Dreadlocks follower )<br/> 
 - **Gregor Karetka**   &nbsp;                             *id=221053*   &nbsp;&nbsp;    (Piri Piri Chicken masterchef)<br/> 
+- **Martin Knob**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               *id=221054*   &nbsp;&nbsp;    (Buga Buga dancer) <br/>
 - **Filip Kocum**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *id=221055*   &nbsp;&nbsp;    (Angakok singer) <br/> 
-- **Martin Knob**   &nbsp;&nbsp;&nbsp;&nbsp;               *id=221054*   &nbsp;&nbsp;    (Buga Buga dancer) <br/>
+- **Samuel Košík**   &nbsp;&nbsp;&nbsp;&nbsp;              *id=221056*   &nbsp;&nbsp;    (Ochre Dreadlocks follower )<br/> 
+
+
 
 Link to this file in your GitHub repository:
 
