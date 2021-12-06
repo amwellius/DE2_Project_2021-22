@@ -86,7 +86,7 @@ Main sensor for measuring the water level of the tank. After entering its dimens
 ![equation](Images/HCSR04_equation.gif)
 &nbsp;
 
-Where **t** is the received value on **ECHO pin** and *0.034* cames from ste speed of soun *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devided by two. *Arduino Uno's* timers are used to measuge width of received square signal. After calculation, distance in milimeters is returned. Its value is sent to other functions, so supplementary data can be sent to display on *Nokia LCD*.
+Where **t** is the received value on *ECHO pin* and *0.034* cames from the speed of sound *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devided by two. *Arduino Uno's* timers are used to measuge width of received square signal. After calculation, distance in milimeters is returned. Its value is sent to other functions, so supplementary data can be sent to display on *Nokia LCD*.
 
 ### EXTRA Water Lever Sensor
 
