@@ -29,7 +29,7 @@ Link to this file in your GitHub repository:
 
 This simple but useful application will help you to fully control your water tank (not only!) in the garden. Do you want to know how much water left? Do you want to replenish the tank? Or are you interested in controlling your own, independent application based on the volume left in the tank? <br/>
 No problem! <br/>
-With this water tank controller you will be able to:
+With this **water tank controller** you will be able to:
 - know current water level in centimeters, percentage and liters,
 - see maximum volume of the tank,
 - use relays to control DC fans, pump to replenish the tank, irrigation control, windows opening and more,
