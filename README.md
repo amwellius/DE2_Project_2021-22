@@ -86,14 +86,14 @@ Main sensor for measuring the water level of the tank. After entering its dimens
 ![equation](Images/HCSR04_equation.gif)
 &nbsp;
 
-Where **t** is the received value on *ECHO pin* and *0.034* cames from the speed of sound *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devided by two. *Arduino Uno's* timers are used to measuge width of received square signal. After calculation, distance in milimeters is returned. Its value is sent to other functions, so supplementary data can be sent to display on *Nokia LCD*.
+Where **t** is the received value on *ECHO pin* and *0.034* cames from the speed of sound *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devided by two. *Arduino Uno's* timers are used to measure width of received square signal. After calculation, distance in milimeters is returned. Its value is sent to other functions, so supplementary data can be sent to display on *Nokia LCD*.
 
 ### EXTRA Water Lever Sensor
 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/water_level_sensor.pdf)
 
-It is situated *4 cm* above main ultrasonic sensor. If ultrasonic fails, this option will prevent overflowing the water tank. Display will print **System overflow** message. Relay module can the programmed for specific behavior after getting to *overflow* stage, too (optional). <br/>
-Connected to analog input pin, GND and Vcc=5 V. Its usage describes table below. <br/>
+It is situated *a few* above main ultrasonic sensor. If ultrasonic fails, this option will prevent overflowing the water tank. Display will print **System overflow** message. Relay module can the programmed for specific behavior after getting to *overflow* stage, too (optional). <br/>
+Sensor is connected to analog input pin, GND and Vcc=5 V. Its usage describes table below. <br/>
    
    | **Value** | **Results in** |
    | :-: | :-: |
@@ -102,7 +102,7 @@ Connected to analog input pin, GND and Vcc=5 V. Its usage describes table below.
 
 
 &nbsp;
-![figure](Images/extra_level_sensor.png)
+![figure](Images/water_level_sensor.png)
 
 
 <a name="libs"></a>
@@ -117,7 +117,7 @@ Write your text here.
 
 **OBRAZOK AKO TO CELE VYZERA/T BUDE**
 
-The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows *water level in cm, percenttage and max usable volume of the water-tank. Application uses one extra sensor to control the max volume. In normal conditions, sensor gives negative data of water level all time. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem ("Owerflow", "Error").
+The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows water level in centimeters, percentage and max usable volume of the water-tank. Application uses one extra sensor to control the max volume. In normal conditions, sensor gives negative data of water level all time. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem ("Owerflow", "Error").
 
 Our product has the ability to interact with relay modules for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
 
