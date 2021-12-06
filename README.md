@@ -61,7 +61,7 @@ Application uses a number of pins and 3.3 V and 5 V power supply. Schematic can 
 &nbsp;
 
 All output data is shown on Nokia LCD display. Library from internet has been edited in order to use with *Arduino Uno*. Display's resolution **84x48**  allows to display many useful data or **graphic representation** of water level as well. Drawn images were converted to byte arrays to simplify the usege in *Microchip Studio*. <br/>
-Picture below shows possible states.
+Picture below shows possible states. <br/>
 ![water states](Images/water_states.png)
 
 ### Relay Module 
