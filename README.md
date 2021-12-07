@@ -88,7 +88,7 @@ Main sensor for measuring the water level of the tank. After entering its dimens
 
 Where **t** is the received value on *ECHO pin* and *0.034* cames from the speed of sound *(340 m/s = 0.034 m/us)*. Sound wave travels from sensor to water, but from water to the sensor as well. That is why the result has to be devided by two. *Arduino Uno's* timers are used to measure width of received square signal. After calculation, distance in milimeters is returned. Its value is sent to other functions, so supplementary data can be sent to display on *Nokia LCD*.
 
-### EXTRA Water Lever Sensor
+### Capacitive Water Lever Sensor
 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/water_level_sensor.pdf)
 
@@ -115,11 +115,25 @@ Write your text here.
 
 ## Main application
 
-**OBRAZOK AKO TO CELE VYZERA/T BUDE**
+![figure](Images/pic_ph_1.png)
 
 The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows water level in centimeters, percentage and max usable volume of the water-tank. Application uses one extra sensor to control the max volume. In normal conditions, sensor gives negative data of water level all time. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem ("Owerflow", "Error").
 
 Our product has the ability to interact with relay modules for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
+
+### How to use
+1. Mount *ultrasonic sensor* on the top of water tank. Sensor's reference **zero (100%)** is set to be 4 centimeters from the ultrasonic transceiver.
+2. Mount *Capacitive sensor* about **1 centimeter** above max water height. (If ultrasonic fails, capacitive sensor will save it from drowning).
+3. Insert dimensions of your water tank into C code. If maximum height of your tank is e.g. 100 cm, than insert only 96 cm, to prevent owerflow.
+   ```c
+   // Tank Volume
+   //**Enter values in cm !
+   #define TANK_X  ((uint32_t)50)
+   #define TANK_Y  ((uint32_t)50)
+   #define TANK_Z  ((uint32_t)100)
+   ```
+4. 
+5. ds
 
 <a name="video"></a>
 
