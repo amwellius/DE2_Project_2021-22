@@ -133,10 +133,10 @@ Our product has the ability to interact with relay modules for external usage. T
    #define TANK_Z  ((uint32_t)100)
    ```
 4. Application is now set up. The *Nokia LCD screen* provides needed information according figure below. User can see data as
-   - MAX volume of the tank in liters: `Vmax:800 L`.
-   - Actual volume of water in the tank in liters: `Vact:441 L`.
-   - Actual volume of water in the tank in percentage: `Vact:55 %`.
-   - Actual volume of water represented by a up-time graphic icon.
+   - MAX volume of the tank in liters: `Vmax:800 L`,
+   - Actual volume of water in the tank in liters: `Vact:441 L`,
+   - Actual volume of water in the tank in percentage: `Vact:55 %`,
+   - Actual volume of water represented by a up-time graphic icon,
    - System status message: `OK`, `ERROR`, `OVERFLOW`.
    <br/>
    
