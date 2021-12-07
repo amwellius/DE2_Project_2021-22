@@ -137,19 +137,27 @@ Our product has the ability to interact with relay modules for external usage. T
    - Actual volume of water in the tank in liters: `Vact:441 L`.
    - Actual volume of water in the tank in percentage: `Vact:55 %`.
    - Actual volume of water represented by a up-time graphic icon.
-   - System status message: `OK`, `ERROR`, `OVERFLOW`
+   - System status message: `OK`, `ERROR`, `OVERFLOW`.
    <br/>
+   
    ![screen final](Images/pic_ph_2.png)
 6. Relay module is set to interact with pressing installed button. Do not hesitate to use your creativity and relay module (modules) on your own by simply editing the code. 
 
 
 ### Possible Stages
+After powering on, test screen procedure runss (represented by `DE2 Water System` screen and `graphic tank icon` filling up). System is ready to operate! 
 
 #### System OK
+Level of water in tank is beewtwen **0** and **100%**, *capacitive sensor* is not activated by water reaching its level; system working correctly.
 
 #### System ERROR
-#### System OVEWFLOW
+   - Bad *ultrasonic calibration*, too close *(<4 cm)* or too far *(>400 cm)*,
+   - Bad tank dimensions,
+   - Capacitor used with relay module and button not connected properly,
+   - Apocalypse.  
 
+#### System OVERFLOW
+*Ultrasonic sensor* occurred **problem**. Water reaches *capacitive sensor*. Different data received from two sensors leads to system `Overflow` stage message.
 
 
 <a name="video"></a>
