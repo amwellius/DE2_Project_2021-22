@@ -117,7 +117,7 @@ Write your text here.
 
 ![figure](Images/pic_ph_1.png)
 
-The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows water level in centimeters, percentage and max usable volume of the water-tank. Application uses one extra sensor to control the max volume. In normal conditions, sensor gives negative data of water level all time. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem ("Owerflow", "Error").
+The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing volume of tank, ultrasonic sensor connected to **Arduino UNO** board will measure the water level. LCD Nokia 5110 display shows water level in centimeters, percentage and max usable volume of the water-tank. Application uses one extra sensor to control the max volume. In normal conditions, sensor gives negative data of water level all time. It is situated few centimeters above the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem (`Owerflow`, `Error`).
 
 Our product has the ability to interact with relay modules for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
 
@@ -132,7 +132,13 @@ Our product has the ability to interact with relay modules for external usage. T
    #define TANK_Y  ((uint32_t)50)
    #define TANK_Z  ((uint32_t)100)
    ```
-4. Application is now set up. The *Nokia LCD screen* provides needed information according figure below. `fasdas`
+4. Application is now set up. The *Nokia LCD screen* provides needed information according figure below. User can see data as
+   - MAX volume of the tank in liters: `Vmax:800 L`.
+   - Actual volume of water in the tank in liters: `Vact:441 L`.
+   - Actual volume of water in the tank in percentage: `Vact:55 %`.
+   - Actual volume of water represented by a up-time graphic icon.
+   - System status message: `OK`, `ERROR`, `OVERFLOW`
+   <br/>
    ![screen final](Images/pic_ph_2.png)
 6. Relay module is set to interact with pressing installed button. Do not hesitate to use your creativity and relay module (modules) on your own by simply editing the code. 
 
