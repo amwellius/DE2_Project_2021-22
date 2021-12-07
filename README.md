@@ -148,7 +148,7 @@ Our product has the ability to interact with relay modules for external usage. T
 After powering on, test screen procedure runs (represented by `DE2 Water System` screen and `graphic tank icon` filling up). System is ready to operate! 
 
 #### System OK
-Level of water in tank is beewtwen **0** and **100%**, *capacitive sensor* is not activated by water reaching its level; system working correctly.
+Level of water in tank is between **0** and **100%**, *capacitive sensor* is not activated by water reaching its level; system working correctly.
 
 #### System ERROR
    - Bad *ultrasonic calibration*, too close *(<4 cm)* or too far *(>400 cm)*,
