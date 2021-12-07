@@ -132,9 +132,17 @@ Our product has the ability to interact with relay modules for external usage. T
    #define TANK_Y  ((uint32_t)50)
    #define TANK_Z  ((uint32_t)100)
    ```
-4. Application is now set up. The *Nokia LCD screen* provides needed information according figure below:
+4. Application is now set up. The *Nokia LCD screen* provides needed information according figure below. `fasdas`
    ![screen final](Images/pic_ph_2.png)
 6. Relay module is set to interact with pressing installed button. Do not hesitate to use your creativity and relay module (modules) on your own by simply editing the code. 
+
+
+### Possible Stages
+
+#### System OK
+
+#### System ERROR
+#### System OVEWFLOW
 
 
 
