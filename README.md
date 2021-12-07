@@ -145,7 +145,7 @@ Our product has the ability to interact with relay modules for external usage. T
 
 
 ### Possible Stages
-After powering on, test screen procedure runss (represented by `DE2 Water System` screen and `graphic tank icon` filling up). System is ready to operate! 
+After powering on, test screen procedure runs (represented by `DE2 Water System` screen and `graphic tank icon` filling up). System is ready to operate! 
 
 #### System OK
 Level of water in tank is beewtwen **0** and **100%**, *capacitive sensor* is not activated by water reaching its level; system working correctly.
