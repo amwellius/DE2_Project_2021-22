@@ -10,7 +10,7 @@
 
 
 
-Link to this file in your GitHub repository:
+Link to this file in GitHub repository:
 
 [https://github.com/amwellius/DE2_Project_2021-22](https://github.com/amwellius/DE2_Project_2021-22)
 
