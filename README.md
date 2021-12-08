@@ -180,7 +180,7 @@ const unsigned char water_level_70[] = {
 #### `HC-SR04.c`
 Calculation of water level distance.
 ```c
-TCCR1B |= (1 << ICES1);                                             // Rest to rising edge
+TCCR1B |= (1 << ICES1);                                             // Reset to rising edge
         falling = ICR1;                                             // Read value ticks
         counts = falling - rising;                                  // Calc. difference between start and stop of the pulse
         dist = ((US_PER_COUNT * (uint32_t)counts) * 340) / 2000;    // Distance in mm
