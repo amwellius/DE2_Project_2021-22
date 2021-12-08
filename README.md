@@ -111,7 +111,87 @@ Sensor is connected to *analog input* pin, *GND* and *Vcc=5 V*. Its usage descri
 
 ## Libraries description
 
-Write your text here.
+Code for this application was written in **C**, compilated using **AVR/GNU C compiler** and **MicroChip Studio**. Project consists of several libraries, list of all files can be found below:
+   - `main.h`- main function header,
+   - `main.c` - includes main procedures and functions,
+   - `english_font.h` - characters for LCD display,
+   - `nokia_5110_lcd.h` - header for LCD display,
+   - `nokia_5110_lcd.c` - functions for LCD controlling,
+   - `water_symbols.h` - header for c file,
+   - `water_symbols.c` - byte maps (figures on LCD), 
+   - `gpio.h` - input/output header,
+   - `gpio.c` - input/output functions,
+   - `timer.h` - header for timers in *Arduino UNO*,
+   - `HC-SR04.h` - header for *ultrasonic sensor*,
+   - `HC-SR04.c` - definitions for *ultrasonic sensor*.
+
+All files are available here:
+   [`main.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/main.h), [`main.c`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/main.c), [`english_font.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/english_font.h), [`nokia_5110_lcd.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/nokia_5110_lcd.h), [`nokia_5110_lcd.c`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/nokia_5110_lcd.c), [`water_symbols.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/water_symbols.h), [`water_symbols.c`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/water_symbols.c), [`gpio.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/gpio.h), [`gpio.c`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/gpio.c), [`timer.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/timer.h), [`HC-SR04.h`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/HC-SR04.h), [`HC-SR04.c`](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/HC-SR04.c).
+
+Some important parts of codes will be discuss. 
+
+##### `main.c`
+Example of controlling graphic representation of water level.
+```c
+          
+if (percentage == 100) selector = 10;
+if (selector == 0) {            
+    LCD_write_bytes_xy_defined_width((unsigned char*)water_level_default, 14, 70, bucket_x, bucket_y);
+} else {
+    LCD_write_bytes_xy_defined_width((unsigned char*)all_water_states[selector], 14, 70, bucket_x, bucket_y);
+}            
+
+// display maximum
+itoa(tank_volume, distance_str, 10);
+LCD_write_english_string(0, 0, "Vmax:");
+LCD_write_english_string_continue(distance_str);
+LCD_write_english_string_continue(" L");
+```
+
+##### `nokia_5110_lcd.h`
+Functions used to control LCD Nokia Display.
+```c
+void LCD_clear();
+void LCD_init();
+void LCD_write_byte(unsigned char dat, unsigned char command);
+void LCD_write_english_string(unsigned char X,unsigned char Y,char *s);
+void LCD_write_english_string_continue(char *s);
+void LCD_write_english_string_continue_precise(char *s, uint16_t data_len);
+void LCD_write_char(unsigned char c);
+void LCD_set_XY(unsigned char X, unsigned char Y);
+void LCD_write_init();
+void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y);
+void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y);
+```
+
+##### `water_symbols.c`
+Example of byte map (icon of 70% left).
+```c
+const unsigned char water_level_70[] = {
+    // 'water level 70%', 14x35px
+    0xfe, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0xfe, 0xff, 0x00,
+    0xf8, 0xf8, 0xf8, 0xf8, 0xf8, 0xf8, 0xf8, 0xf8, 0xf8, 0xf8, 0x00, 0xff, 0xff, 0x00, 0xff, 0xff,
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00, 0xff, 0xff, 0x00, 0xff, 0xff, 0xff, 0xff,
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00, 0xff, 0x07, 0x04, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05,
+    0x05, 0x05, 0x05, 0x05, 0x04, 0x07
+};
+```
+
+##### `HC-SR04.c`
+Calculation of water level distance.
+```c
+TCCR1B |= (1 << ICES1);                                             // Rest to rising edge
+        falling = ICR1;                                             // Read value ticks
+        counts = falling - rising;                                  // Calc. difference between start and stop of the pulse
+        dist = ((US_PER_COUNT * (uint32_t)counts) * 340) / 2000;    // Distance in mm
+        
+        for (int8_t i = 9; i >= 1; i--) {
+            dist_vals[i] = dist_vals[i-1];
+        }
+        dist_vals[0] = dist;
+```
+
+
 
 <a name="main"></a>
 
