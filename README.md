@@ -131,7 +131,7 @@ All files are available here:
 
 Some important parts of codes will be discuss. 
 
-##### `main.c`
+#### `main.c`
 Example of controlling graphic representation of water level.
 ```c
           
@@ -149,7 +149,7 @@ LCD_write_english_string_continue(distance_str);
 LCD_write_english_string_continue(" L");
 ```
 
-##### `nokia_5110_lcd.h`
+#### `nokia_5110_lcd.h`
 Functions used to control LCD Nokia Display.
 ```c
 void LCD_clear();
@@ -165,7 +165,7 @@ void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t sta
 void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y);
 ```
 
-##### `water_symbols.c`
+#### `water_symbols.c`
 Example of byte map (icon of 70% left).
 ```c
 const unsigned char water_level_70[] = {
@@ -178,7 +178,7 @@ const unsigned char water_level_70[] = {
 };
 ```
 
-##### `HC-SR04.c`
+#### `HC-SR04.c`
 Calculation of water level distance.
 ```c
 TCCR1B |= (1 << ICES1);                                             // Rest to rising edge
