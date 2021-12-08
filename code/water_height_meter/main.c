@@ -72,11 +72,11 @@ int main(void)
     while (1) 
     {   
         // Getting distance
-        LCD_clear();                                                            // Clear lcd
-        distance_val = ((uint32_t) get_dist_avg());                                 // Get distance in mm //-40 lebo je to 4cm nad hladinou
-        distance_val -= 40;
+        LCD_clear();                                                                // Clear lcd
+        distance_val = ((uint32_t) get_dist_avg());                                 // Get distance in mm 
+        distance_val -= 40;                                                         // Set reference to 4 cm from ultrasonic sensor
         distance_val /= 10;
-        tank_actual_volume = ((TANK_Z - distance_val) * TANK_X * TANK_Y) / 1000;
+        tank_actual_volume = ((TANK_Z - distance_val) * TANK_X * TANK_Y) / 1000;    //get volume in liters
         
         if (tank_actual_volume > 1000 || tank_actual_volume < 0) {
             // display error
@@ -116,7 +116,8 @@ int main(void)
                 }
                 cnt++;
             }
-                        
+            
+            // selecting water level iconic representation            
             if (percentage == 100) selector = 10;
             if (selector == 0) {            
                 LCD_write_bytes_xy_defined_width((unsigned char*)water_level_default, 14, 70, bucket_x, bucket_y);
@@ -218,7 +219,7 @@ void relay_init()
     EICRA |= (1 << ISC01);    // Trigger on falling edge
     EIMSK |= (1 << INT0);     // Enable external interrupt INT0
     
-    // Set realy to open
+    // Set relay to open
     DDRC |= (1 << 5);
     PORTC |= (1 << 5);
 }
