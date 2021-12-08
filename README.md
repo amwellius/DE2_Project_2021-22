@@ -133,8 +133,7 @@ Some important parts of codes will be discuss.
 
 #### `main.c`
 Example of controlling graphic representation of water level.
-```c
-          
+```c          
 if (percentage == 100) selector = 10;
 if (selector == 0) {            
     LCD_write_bytes_xy_defined_width((unsigned char*)water_level_default, 14, 70, bucket_x, bucket_y);
