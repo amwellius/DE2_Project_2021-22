@@ -202,8 +202,8 @@ ISR(TIMER0_OVF_vect)
 }
 
 /**********************************************************************
- * Function: ADC complete interrupt
- * Purpose:  Display value on LCD and send it to UART.
+ * EXTRA capacitive sensor
+ * ADC value
  **********************************************************************/
 ISR(ADC_vect)
 {
