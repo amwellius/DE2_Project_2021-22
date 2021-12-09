@@ -247,7 +247,7 @@ Rises when unexpected data is measured.
 
 ## Video
 
-Write your text here
+[Link to YouTube](https://www.youtube.com/watch?v=HSv_cm3vf8U) 
 
 <a name="references"></a>
 
