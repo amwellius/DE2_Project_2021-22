@@ -269,6 +269,8 @@ Write your text here
    - [GitHub](https://github.com/)
    - [GitHub Desktop](https://desktop.github.com/)
    - [Git Bash](https://git-scm.com/download/win)
+
+All pictures have been taken in DE2 Laboratories!
    
 ________________________________________________________________________________
 ©2021, VUT FEKT, Brno, Czech Republic <br/>
