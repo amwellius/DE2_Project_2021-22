@@ -33,7 +33,7 @@ No problem! <br/>
 With our **Water Tank Controller** you will be able to:
 - know **current water level** in centimeters, percentage and liters,
 - see **maximum** volume of the tank,
-- use relays to control DC fans, pump to replenish the tank, irrigation control, windows opening and more,
+- use relays to control pump,
 - prevent **owerflowing** the tank with extra sensor,
 - see **graphic representation** of the water level.
 
