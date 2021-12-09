@@ -83,7 +83,7 @@ Usage of relay(s) is optional. **C code** has implemented section which triggers
 ![figure](Images/pic_ultrasonic.png)
 &nbsp;
 
-Main sensor for measuring the water level of the tank. After entering its **dimensions** the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40MHz signal. This will be given by *ECHO pin*, so received value will be the time the wave travelled to the water and back to the sensor. Final distance can be obtained by this equation: 
+Main sensor for measuring the water level of the tank. After entering its **dimensions** the sensor is calibrated. Providing it with short 10us pulse will result in receiving 8 cycles of 40KHz signal. This will be given by *ECHO pin*, so received value will be the time the wave travelled to the water and back to the sensor. Final distance can be obtained by this equation: 
 
 &nbsp;
 ![equation](Images/HCSR04_equation.gif)
