@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5fultrasonic_5fsensor_0',['init_ultrasonic_sensor',['../group__filip__ul.html#gabc01d36f88638c858f285e64c66c08dd',1,'init_ultrasonic_sensor():&#160;HC-SR04.c'],['../group__filip__ul.html#gabc01d36f88638c858f285e64c66c08dd',1,'init_ultrasonic_sensor(void):&#160;HC-SR04.c']]]
+  ['hc_2dsr04_2eh_0',['HC-SR04.h',['../_h_c-_s_r04_8h.html',1,'']]]
 ];
