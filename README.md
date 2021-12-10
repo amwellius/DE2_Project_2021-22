@@ -264,9 +264,6 @@ Documentation available here: <br/>
    - Theoretical knowledge from Digital-Electronics-2, 2021 > [Link](https://moodle.vut.cz/course/view.php?id=242365)
    - Lab classes **DE2** > [Link](https://github.com/tomas-fryza/Digital-electronics-2)
    - Byte Arrays Generator > [Link](https://javl.github.io/image2cpp/)
-   - online stuff > [Link](www.hereenterlink.hell)
-   - online stuff > [Link](www.hereenterlink.hell)
-   - online stuff > [Link](www.hereenterlink.hell)
    - LaTeX equation editor > [Link](https://www.codecogs.com/latex/eqneditor.php)
    
  
@@ -276,6 +273,7 @@ Documentation available here: <br/>
    - [GitHub](https://github.com/)
    - [GitHub Desktop](https://desktop.github.com/)
    - [Git Bash](https://git-scm.com/download/win)
+   - [KiCAD](https://componentsearchengine.com/library/kicad?gclid=CjwKCAiAksyNBhAPEiwAlDBeLB2QSESyWl1669aV7oK23ZJxxCjH-YFDBnxbHhdrZ5DbmMH_Wg5LuBoCEQUQAvD_BwE)
 
 All pictures have been taken in DE2 Laboratories!
    
