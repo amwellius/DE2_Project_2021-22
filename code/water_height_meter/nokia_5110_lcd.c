@@ -1,9 +1,9 @@
-/*
- * nokia_5110_lcd.c
+/***********************************************************************
+ * 
+ * Nokia LCD 5110 library for AVR-GCC.
+ * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
  *
- * Created: 20. 11. 2021 14:52:11
- *  Author: gkaretka
- */ 
+ **********************************************************************/
 
 #include "nokia_5110_lcd.h"
 #include "english_font.h"
@@ -111,7 +111,7 @@ void LCD_write_english_string_continue_precise(char *s, uint16_t data_len)
     while (*s) {
         LCD_write_char(*s);
         s++;
-        if (s >= data_len) return;
+        if ((uint32_t)s >= data_len) return;
     }
 }
 

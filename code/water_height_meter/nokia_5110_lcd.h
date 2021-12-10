@@ -1,10 +1,24 @@
-/*
- * nokia_5110_lcd.h
+/***********************************************************************
+ * 
+ * Timer library for AVR-GCC.
+ * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
  *
- * Created: 20. 11. 2021 14:53:09
- *  Author: gkaretka
- */ 
+ * Copyright (c) 2019-Present Tomas Fryza
+ * Dept. of Radio Electronics, Brno University of Technology, Czechia
+ * This work is licensed under the terms of the MIT license.
+ *
+ **********************************************************************/
 
+/**
+ * @file 
+ * @defgroup karetka_lcd Nokia 5110 LCD Library <nokia_5110_lcd.h>
+ * @code #include "nokia_5110_lcd.h" @endcode
+ *
+ * @note to modify this code to work with any pinout, modify pin definitions in nokia_5110_lcd.h
+ *
+ * @brief LCD Nokia 5110 library for AVR-GCC.
+ * @{
+ */
 
 #ifndef NOKIA_5110_LCD_H_
 #define NOKIA_5110_LCD_H_
@@ -80,6 +94,10 @@
 
 #endif
 
+/* Defines */
+
+#define NUM_OF_CELLS    504
+
 /*
  *
  *  DO NOT EDIT ANYTHING BELOW
@@ -100,21 +118,98 @@
 #define SCLK_set     SCLK_PORT      |=  (1 << SCLK_PIN)
 #define SCLK_clr     SCLK_PORT      &= ~(1 << SCLK_PIN)
 
-void LCD_clear();
-void LCD_init();
+/* Function prototypes -----------------------------------------------*/
+
+/**
+ * @name Functions
+ */
+
+/**
+ * @brief  Clears LCD
+ * @return none
+ */
+void LCD_clear(void);
+
+/**
+ * @brief  Displays init message defined init_msg_1
+ * @return none
+ */
+void LCD_write_init(void);
+
+/**
+ * @brief  Initializes LCD pins and LCD with default settings
+ * @return none
+ */
+void LCD_init(void);
+
+/**
+ * @brief  Write byte using software SPI to LCD
+ * @param  dat  8bit value of byte
+ * @param  commad  1 bit value (1 if 8bits are command, 0 if 8bits are data)
+ * @return none
+ */
 void LCD_write_byte(unsigned char dat, unsigned char command);
-void LCD_write_english_string(unsigned char X,unsigned char Y,char *s);
+
+/**
+ * @brief  Write english string to display at specific location
+ * @param  X  x coordinate on screen (0-84, columns)
+ * @param  Y  y coordinate on screen (0-6, rows)
+ * @param  *s  string
+ * @return none
+ */
+void LCD_write_english_string(unsigned char X, unsigned char Y, char *s);
+
+/**
+ * @brief  Write string to next location 
+ * @param  *s  string
+ * @return none
+ */
 void LCD_write_english_string_continue(char *s);
+
+/**
+ * @brief  Write string to next location with precise length
+ * @param  *s  string
+ * @param  data_len  number of chars
+ * @return none
+ */
 void LCD_write_english_string_continue_precise(char *s, uint16_t data_len);
+
+/**
+ * @brief  Write single char to display (using english_font.h)
+ * @param  c  char to be displayed
+ * @return none
+ */
 void LCD_write_char(unsigned char c);
+
+/**
+ * @brief  Set cursor on the screen to precise location
+ * @param  X  x coordinate on screen (0-84, columns)
+ * @param  Y  y coordinate on screen (0-6, rows)
+ * @return none
+ */
 void LCD_set_XY(unsigned char X, unsigned char Y);
-void LCD_write_init();
+
+/**
+ * @brief  Display image consisting of bytes
+ * @param  cells  *char containing image bytes
+ * @param  cells_n number of bytes
+ * @param  start_x  start x coordinate on screen (0-84, columns)
+ * @param  start_y  start y coordinate on screen (0-6, rows)
+ * @return none
+ */
 void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t start_x, uint16_t start_y);
+
+/**
+ * @brief  Display image consisting of bytes with defined length
+ * after every n*length bytes new line is sent
+ * @param  cells  *char containing image bytes
+ * @param  width  width in bytes (pixels)
+ * @param  size  number of bytes
+ * @param  start_x  start x coordinate on screen (0-84, columns)
+ * @param  start_y  start y coordinate on screen (0-6, rows)
+ * @return none
+ */
 void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y);
 
-
-/* Defines */
-
-#define NUM_OF_CELLS    504
 
 #endif /* NOKIA_5110_LCD_H_ */

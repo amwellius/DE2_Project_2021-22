@@ -1,0 +1,73 @@
+\hypertarget{timer_8h}{}\doxysection{C\+:/\+Users/gkaretka/\+Documents/\+Git\+Hub/\+DE2\+\_\+\+Project\+\_\+2021-\/22/code/water\+\_\+height\+\_\+meter/timer.h File Reference}
+\label{timer_8h}\index{C:/Users/gkaretka/Documents/GitHub/DE2\_Project\_2021-\/22/code/water\_height\_meter/timer.h@{C:/Users/gkaretka/Documents/GitHub/DE2\_Project\_2021-\/22/code/water\_height\_meter/timer.h}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{Indent}\textbf{ Definitions for 16-\/bit Timer/\+Counter1}\par
+{\em \begin{DoxyNote}{Note}
+t\+\_\+\+OVF = 1/\+F\+\_\+\+CPU $\ast$ prescaler $\ast$ 2$^\wedge$n where n = 16, F\+\_\+\+CPU = 16 MHz 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TIM1\+\_\+stop}()~TCCR1B \&= $\sim$((1$<$$<$CS12) $\vert$ (1$<$$<$CS11) $\vert$ (1$<$$<$CS10));
+\begin{DoxyCompactList}\small\item\em Stop timer, prescaler 000 -\/-\/\texorpdfstring{$>$}{>} STOP. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+4ms}()~TCCR1B \&= $\sim$((1$<$$<$CS12) $\vert$ (1$<$$<$CS11)); TCCR1B $\vert$= (1$<$$<$CS10);
+\begin{DoxyCompactList}\small\item\em Set overflow 4ms, prescaler 001 -\/-\/\texorpdfstring{$>$}{>} 1. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+33ms}()~TCCR1B \&= $\sim$((1$<$$<$CS12) $\vert$ (1$<$$<$CS10)); TCCR1B $\vert$= (1$<$$<$CS11);
+\begin{DoxyCompactList}\small\item\em Set overflow 33ms, prescaler 010 -\/-\/\texorpdfstring{$>$}{>} 8. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+262ms}()~TCCR1B \&= $\sim$(1$<$$<$CS12); TCCR1B $\vert$= (1$<$$<$CS11) $\vert$ (1$<$$<$CS10);
+\begin{DoxyCompactList}\small\item\em Set overflow 262ms, prescaler 011 -\/-\/\texorpdfstring{$>$}{>} 64. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+1s}()~TCCR1B \&= $\sim$((1$<$$<$CS11) $\vert$ (1$<$$<$CS10)); TCCR1B $\vert$= (1$<$$<$CS12);
+\begin{DoxyCompactList}\small\item\em Set overflow 1s, prescaler 100 -\/-\/\texorpdfstring{$>$}{>} 256. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+4s}()~TCCR1B \&= $\sim$(1$<$$<$CS11); TCCR1B $\vert$= (1$<$$<$CS12) $\vert$ (1$<$$<$CS10);
+\begin{DoxyCompactList}\small\item\em Set overflow 4s, prescaler // 101 -\/-\/\texorpdfstring{$>$}{>} 1024. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+interrupt\+\_\+enable}()~TIMSK1 $\vert$= (1$<$$<$TOIE1);
+\begin{DoxyCompactList}\small\item\em Enable overflow interrupt, 1 -\/-\/\texorpdfstring{$>$}{>} enable. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM1\+\_\+overflow\+\_\+interrupt\+\_\+disable}()~TIMSK1 \&= $\sim$(1$<$$<$TOIE1);
+\begin{DoxyCompactList}\small\item\em Disable overflow interrupt, 0 -\/-\/\texorpdfstring{$>$}{>} disable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Definitions for 8-\/bit Timer/\+Counter0}\par
+{\em \begin{DoxyNote}{Note}
+t\+\_\+\+OVF = 1/\+F\+\_\+\+CPU $\ast$ prescaler $\ast$ 2$^\wedge$n where n = 8, F\+\_\+\+CPU = 16 MHz 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TIM0\+\_\+stop}()~TCCR0B \&= $\sim$((1$<$$<$CS02) $\vert$ (1$<$$<$CS01) $\vert$ (1$<$$<$CS00));
+\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+16us}()~TCCR0B \&= $\sim$((1$<$$<$CS02) $\vert$ (1$<$$<$CS01)); TCCR0B $\vert$= (1$<$$<$CS00);
+\begin{DoxyCompactList}\small\item\em Set overflow 16us, prescaler 001 -\/-\/\texorpdfstring{$>$}{>} 1. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+128us}()~TCCR0B \&= $\sim$((1$<$$<$CS02) $\vert$ (1$<$$<$CS00)); TCCR0B $\vert$= (1$<$$<$CS01);
+\begin{DoxyCompactList}\small\item\em Set overflow 128us, prescaler 010 -\/-\/\texorpdfstring{$>$}{>} 8. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+1024us}()~TCCR0B \&= $\sim$(1$<$$<$CS02); TCCR0B $\vert$= (1$<$$<$CS01) $\vert$ (1$<$$<$CS00);
+\begin{DoxyCompactList}\small\item\em Set overflow 1024 us, prescaler 011 -\/-\/\texorpdfstring{$>$}{>} 64. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+4096us}()~TCCR0B \&= $\sim$((1$<$$<$CS01) $\vert$ (1$<$$<$CS00)); TCCR0B $\vert$= (1$<$$<$CS02);
+\begin{DoxyCompactList}\small\item\em Set overflow 4096us, prescaler 100 -\/-\/\texorpdfstring{$>$}{>} 256. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+16384us}()~TCCR0B \&= $\sim$(1$<$$<$CS01); TCCR0B $\vert$= (1$<$$<$CS02) $\vert$ (1$<$$<$CS00);
+\begin{DoxyCompactList}\small\item\em Set overflow 16384 us, prescaler // 101 -\/-\/\texorpdfstring{$>$}{>} 1024. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+interrupt\+\_\+enable}()~TIMSK0 $\vert$= (1$<$$<$TOIE0);
+\begin{DoxyCompactList}\small\item\em Enable overflow interrupt, 1 -\/-\/\texorpdfstring{$>$}{>} enable. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM0\+\_\+overflow\+\_\+interrupt\+\_\+disable}()~TIMSK0 \&= $\sim$(1$<$$<$TOIE0);
+\begin{DoxyCompactList}\small\item\em Disable overflow interrupt, 0 -\/-\/\texorpdfstring{$>$}{>} disable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Definitions for 8-\/bit Timer/\+Counter2}\par
+{\em \begin{DoxyNote}{Note}
+t\+\_\+\+OVF = 1/\+F\+\_\+\+CPU $\ast$ prescaler $\ast$ 2$^\wedge$n where n = 8, F\+\_\+\+CPU = 16 MHz 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TIM2\+\_\+stop}()~TCCR2B \&= $\sim$((1$<$$<$CS22) $\vert$ (1$<$$<$CS21) $\vert$ (1$<$$<$CS20));
+\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+16us}()~TCCR2B \&= $\sim$((1$<$$<$CS22) $\vert$ (1$<$$<$CS21)); TCCR2B $\vert$= (1$<$$<$CS20);
+\begin{DoxyCompactList}\small\item\em Set overflow 16us, prescaler 001 -\/-\/\texorpdfstring{$>$}{>} 1. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+128us}()~TCCR2B \&= $\sim$((1$<$$<$CS22) $\vert$ (1$<$$<$CS20)); TCCR2B $\vert$= (1$<$$<$CS21);
+\begin{DoxyCompactList}\small\item\em Set overflow 128us, prescaler 010 -\/-\/\texorpdfstring{$>$}{>} 8. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+1024us}()~TCCR2B \&= $\sim$(1$<$$<$CS22); TCCR2B $\vert$= (1$<$$<$CS21) $\vert$ (1$<$$<$CS20);
+\begin{DoxyCompactList}\small\item\em Set overflow 1024 us, prescaler 011 -\/-\/\texorpdfstring{$>$}{>} 64. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+4096us}()~TCCR2B \&= $\sim$((1$<$$<$CS21) $\vert$ (1$<$$<$CS20)); TCCR2B $\vert$= (1$<$$<$CS22);
+\begin{DoxyCompactList}\small\item\em Set overflow 4096 us, prescaler 100 -\/-\/\texorpdfstring{$>$}{>} 256. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+16384us}()~TCCR2B $\vert$= (1$<$$<$CS22) $\vert$ (1$<$$<$CS21) $\vert$ (1$<$$<$CS20);
+\begin{DoxyCompactList}\small\item\em Set overflow 16384 us, prescaler // 101 -\/-\/\texorpdfstring{$>$}{>} 1024. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+interrupt\+\_\+enable}()~TIMSK2 $\vert$= (1$<$$<$TOIE2);
+\begin{DoxyCompactList}\small\item\em Enable overflow interrupt, 1 -\/-\/\texorpdfstring{$>$}{>} enable. \end{DoxyCompactList}\item 
+\#define {\bfseries TIM2\+\_\+overflow\+\_\+interrupt\+\_\+disable}()~TIMSK2 \&= $\sim$(1$<$$<$TOIE2);
+\begin{DoxyCompactList}\small\item\em Disable overflow interrupt, 0 -\/-\/\texorpdfstring{$>$}{>} disable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}

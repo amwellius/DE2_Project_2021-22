@@ -1,0 +1,25 @@
+var timer_8h =
+[
+    [ "TIM0_overflow_1024us", "group__fryza__timer.html#gafe98d9d0a24ee34aeaada34f8224833c", null ],
+    [ "TIM0_overflow_128us", "group__fryza__timer.html#gac1d3cc9f4c6066a4ce376c6734816f54", null ],
+    [ "TIM0_overflow_16384us", "group__fryza__timer.html#ga0b908037f85724c9138d1b3169dc93b2", null ],
+    [ "TIM0_overflow_16us", "group__fryza__timer.html#gae6709b46981f94aef9b17854333ddb89", null ],
+    [ "TIM0_overflow_4096us", "group__fryza__timer.html#ga79135e3531b49b4c04d1f167ed365092", null ],
+    [ "TIM0_overflow_interrupt_disable", "group__fryza__timer.html#gaf226f4c7254d473adab5a0189349c525", null ],
+    [ "TIM0_overflow_interrupt_enable", "group__fryza__timer.html#gaccfdefd3d2f8a982155fb5f60d5fdc35", null ],
+    [ "TIM1_overflow_1s", "group__fryza__timer.html#ga36d54e146587c408a2ce92dfcd2c52c3", null ],
+    [ "TIM1_overflow_262ms", "group__fryza__timer.html#ga77e94f0031880610c8fdbc9a0257ef09", null ],
+    [ "TIM1_overflow_33ms", "group__fryza__timer.html#ga35693ced5c9f4a0b669ac24ceca8e69b", null ],
+    [ "TIM1_overflow_4ms", "group__fryza__timer.html#ga1193ba83b972f64ffc89d54dd9cb3d88", null ],
+    [ "TIM1_overflow_4s", "group__fryza__timer.html#gac1fab4593fb6fa4dd8239431180343f3", null ],
+    [ "TIM1_overflow_interrupt_disable", "group__fryza__timer.html#ga650fbf1dbe4572e36196a71982dbd061", null ],
+    [ "TIM1_overflow_interrupt_enable", "group__fryza__timer.html#gad43aa0fc3eb8c3bd21ef2d4546130f05", null ],
+    [ "TIM1_stop", "group__fryza__timer.html#ga85dff9eee7b0f0cc8a8a1d13793742a3", null ],
+    [ "TIM2_overflow_1024us", "group__fryza__timer.html#ga0e832f9c546a9d444aeda27a99bceffa", null ],
+    [ "TIM2_overflow_128us", "group__fryza__timer.html#ga0dd93947c186790d6f90458584ca32f8", null ],
+    [ "TIM2_overflow_16384us", "group__fryza__timer.html#ga30de2e953ee60b64daabfa23a4668a42", null ],
+    [ "TIM2_overflow_16us", "group__fryza__timer.html#ga1dbc055ae28bcf42c14477b5417f4a62", null ],
+    [ "TIM2_overflow_4096us", "group__fryza__timer.html#ga27ab719a3e283041b4dc3c4408ce4f20", null ],
+    [ "TIM2_overflow_interrupt_disable", "group__fryza__timer.html#ga3f4c0301e27c932776f4cd555c158842", null ],
+    [ "TIM2_overflow_interrupt_enable", "group__fryza__timer.html#ga4f94c9cc9debb3cb5a3df6912238064a", null ]
+];

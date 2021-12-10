@@ -1,0 +1,140 @@
+\hypertarget{nokia__5110__lcd_8h_source}{}\doxysection{C\+:/\+Users/gkaretka/\+Documents/\+Git\+Hub/\+DE2\+\_\+\+Project\+\_\+2021-\/22/code/water\+\_\+height\+\_\+meter/nokia\+\_\+5110\+\_\+lcd.h}
+\mbox{\hyperlink{nokia__5110__lcd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * }}
+\DoxyCodeLine{3 \textcolor{comment}{ * Timer library for AVR-\/GCC.}}
+\DoxyCodeLine{4 \textcolor{comment}{ * ATmega328P (Arduino Uno), 16 MHz, AVR 8-\/bit Toolchain 3.6.2}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ * Copyright (c) 2019-\/Present Tomas Fryza}}
+\DoxyCodeLine{7 \textcolor{comment}{ * Dept. of Radio Electronics, Brno University of Technology, Czechia}}
+\DoxyCodeLine{8 \textcolor{comment}{ * This work is licensed under the terms of the MIT license.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ **********************************************************************/}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifndef NOKIA\_5110\_LCD\_H\_}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define NOKIA\_5110\_LCD\_H\_}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef F\_CPU}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{    \#define F\_CPU 16000000L}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <avr/io.h>}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <util/delay.h>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}water\_symbols.h"{}}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{comment}{//\#define ARDUINO\_MEGA}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ARDUINO\_UNO}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Arduino Mega}}
+\DoxyCodeLine{38 \textcolor{comment}{ * E5 -\/ RST}}
+\DoxyCodeLine{39 \textcolor{comment}{ * G5 -\/ CE -\/ can be asserted low}}
+\DoxyCodeLine{40 \textcolor{comment}{ * E3 -\/ DC -\/ data/command}}
+\DoxyCodeLine{41 \textcolor{comment}{ * H3 -\/ DIN -\/ data in}}
+\DoxyCodeLine{42 \textcolor{comment}{ * H4 -\/ CLK -\/ SPI clk}}
+\DoxyCodeLine{43 \textcolor{comment}{ */}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Arduino Uno}}
+\DoxyCodeLine{46 \textcolor{comment}{ * B5 -\/ RST}}
+\DoxyCodeLine{47 \textcolor{comment}{ * B4 -\/ CE -\/ can be asserted low}}
+\DoxyCodeLine{48 \textcolor{comment}{ * B3 -\/ DC -\/ data/command}}
+\DoxyCodeLine{49 \textcolor{comment}{ * B2 -\/ DIN -\/ data in}}
+\DoxyCodeLine{50 \textcolor{comment}{ * B1 -\/ CLK -\/ SPI clk}}
+\DoxyCodeLine{51 \textcolor{comment}{*/}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifdef ARDUINO\_MEGA}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define LCD\_RST\_PORT    PORTE}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define LCD\_RST\_DDR     DDRE}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define LCD\_RST\_PIN     5}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define LCD\_CE\_PORT     PORTG}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define LCD\_CE\_DDR      DDRG}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define LCD\_CE\_PIN      5}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define LCD\_DC\_PORT     PORTE}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define LCD\_DC\_DDR      DDRE}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define LCD\_DC\_PIN      3}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define SDIN\_PORT       PORTH  }}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define SDIN\_DDR        DDRH}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define SDIN\_PIN        3}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define SCLK\_PORT       PORTH}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define SCLK\_DDR        DDRH}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define SCLK\_PIN        4}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define LCD\_RST\_PORT    PORTB}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define LCD\_RST\_DDR     DDRB}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define LCD\_RST\_PIN     5}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define LCD\_CE\_PORT     PORTB}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LCD\_CE\_DDR      DDRB}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define LCD\_CE\_PIN      4}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define LCD\_DC\_PORT     PORTB}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define LCD\_DC\_DDR      DDRB}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define LCD\_DC\_PIN      3}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define SDIN\_PORT       PORTB}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define SDIN\_DDR        DDRB}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define SDIN\_PIN        2}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define SCLK\_PORT       PORTB}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define SCLK\_DDR        DDRB}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define SCLK\_PIN        1}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{/* Defines */}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define NUM\_OF\_CELLS    504}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{comment}{/*}}
+\DoxyCodeLine{102 \textcolor{comment}{ *}}
+\DoxyCodeLine{103 \textcolor{comment}{ *  DO NOT EDIT ANYTHING BELOW}}
+\DoxyCodeLine{104 \textcolor{comment}{ *}}
+\DoxyCodeLine{105 \textcolor{comment}{ */}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{comment}{/* Macros to ease the work */}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define LCD\_RST\_set  LCD\_RST\_PORT   |=  (1 << LCD\_RST\_PIN)}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LCD\_RST\_clr  LCD\_RST\_PORT   \&= \string~(1 << LCD\_RST\_PIN)}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define LCD\_DC\_set   LCD\_DC\_PORT    |=  (1 << LCD\_DC\_PIN)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LCD\_DC\_clr   LCD\_DC\_PORT    \&= \string~(1 << LCD\_DC\_PIN)}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define SDIN\_set     SDIN\_PORT      |=  (1 << SDIN\_PIN)    }}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define SDIN\_clr     SDIN\_PORT      \&= \string~(1 << SDIN\_PIN)}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define SCLK\_set     SCLK\_PORT      |=  (1 << SCLK\_PIN)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define SCLK\_clr     SCLK\_PORT      \&= \string~(1 << SCLK\_PIN)}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{comment}{/* Function prototypes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{131 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_gab3d3c08a4027d3e918914c1562ced027}{LCD\_clear}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{137 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_ga9dd366b728e723c8537c8ead7e10d721}{LCD\_write\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{143 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_ga301a0b73016a44e015dbd374c08243d4}{LCD\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{151 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_gafbf41bd2716c81ed6c3b7648db89bc85}{LCD\_write\_byte}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} dat, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} command);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{160 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_gad44346cba418618965d0a4c35170c545}{LCD\_write\_english\_string}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} X, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Y, \textcolor{keywordtype}{char} *s);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{167 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_gababb9428b935a712d39c05e5d390a9df}{LCD\_write\_english\_string\_continue}}(\textcolor{keywordtype}{char} *s);}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{175 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_ga7853e350aabf1a29e7d73a3cffa39e5f}{LCD\_write\_english\_string\_continue\_precise}}(\textcolor{keywordtype}{char} *s, uint16\_t data\_len);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{182 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_ga2fcc3b8c2118c213d8458ea42066246c}{LCD\_write\_char}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{190 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_gaf11001dc77aea7b4bdfd6d30a029a52f}{LCD\_set\_XY}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} X, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Y);}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{200 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_ga2eb5b06a40210637c4ef83f81b94828f}{LCD\_write\_whole\_screen}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *cells, uint16\_t cells\_n, uint16\_t start\_x, uint16\_t start\_y);}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{212 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__karetka__lcd_gab16d07e080f1c1f5a2bfa2c10b0d1f66}{LCD\_write\_bytes\_xy\_defined\_width}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *cells, uint16\_t width, uint16\_t size, uint16\_t x, uint16\_t y);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* NOKIA\_5110\_LCD\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

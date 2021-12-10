@@ -65,7 +65,6 @@ int main(void)
     // Main sensor is mounted 4cm above tank_max_height
     uint16_t tank_actual_volume;
     uint16_t tank_volume = (TANK_X * TANK_Y * TANK_Z) / 1000;
-    uint16_t tank_max_height = (TANK_Z * TANK_MAX_PERCENTAGE_NUM) / TANK_MAX_PERCENTAGE_DENUM;
     uint32_t promile = 0;
     uint32_t percentage = 0;
     

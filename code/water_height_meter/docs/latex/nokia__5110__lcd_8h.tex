@@ -1,0 +1,87 @@
+\hypertarget{nokia__5110__lcd_8h}{}\doxysection{C\+:/\+Users/gkaretka/\+Documents/\+Git\+Hub/\+DE2\+\_\+\+Project\+\_\+2021-\/22/code/water\+\_\+height\+\_\+meter/nokia\+\_\+5110\+\_\+lcd.h File Reference}
+\label{nokia__5110__lcd_8h}\index{C:/Users/gkaretka/Documents/GitHub/DE2\_Project\_2021-\/22/code/water\_height\_meter/nokia\_5110\_lcd.h@{C:/Users/gkaretka/Documents/GitHub/DE2\_Project\_2021-\/22/code/water\_height\_meter/nokia\_5110\_lcd.h}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}water\+\_\+symbols.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries F\+\_\+\+CPU}~16000000L
+\item 
+\#define {\bfseries ARDUINO\+\_\+\+UNO}
+\item 
+\#define {\bfseries LCD\+\_\+\+RST\+\_\+\+PORT}~PORTB
+\item 
+\#define {\bfseries LCD\+\_\+\+RST\+\_\+\+DDR}~DDRB
+\item 
+\#define {\bfseries LCD\+\_\+\+RST\+\_\+\+PIN}~5
+\item 
+\#define {\bfseries LCD\+\_\+\+CE\+\_\+\+PORT}~PORTB
+\item 
+\#define {\bfseries LCD\+\_\+\+CE\+\_\+\+DDR}~DDRB
+\item 
+\#define {\bfseries LCD\+\_\+\+CE\+\_\+\+PIN}~4
+\item 
+\#define {\bfseries LCD\+\_\+\+DC\+\_\+\+PORT}~PORTB
+\item 
+\#define {\bfseries LCD\+\_\+\+DC\+\_\+\+DDR}~DDRB
+\item 
+\#define {\bfseries LCD\+\_\+\+DC\+\_\+\+PIN}~3
+\item 
+\#define {\bfseries SDIN\+\_\+\+PORT}~PORTB
+\item 
+\#define {\bfseries SDIN\+\_\+\+DDR}~DDRB
+\item 
+\#define {\bfseries SDIN\+\_\+\+PIN}~2
+\item 
+\#define {\bfseries SCLK\+\_\+\+PORT}~PORTB
+\item 
+\#define {\bfseries SCLK\+\_\+\+DDR}~DDRB
+\item 
+\#define {\bfseries SCLK\+\_\+\+PIN}~1
+\item 
+\#define {\bfseries NUM\+\_\+\+OF\+\_\+\+CELLS}~504
+\item 
+\#define {\bfseries LCD\+\_\+\+RST\+\_\+set}~LCD\+\_\+\+RST\+\_\+\+PORT   $\vert$=  (1 $<$$<$ LCD\+\_\+\+RST\+\_\+\+PIN)
+\item 
+\#define {\bfseries LCD\+\_\+\+RST\+\_\+clr}~LCD\+\_\+\+RST\+\_\+\+PORT   \&= $\sim$(1 $<$$<$ LCD\+\_\+\+RST\+\_\+\+PIN)
+\item 
+\#define {\bfseries LCD\+\_\+\+DC\+\_\+set}~LCD\+\_\+\+DC\+\_\+\+PORT    $\vert$=  (1 $<$$<$ LCD\+\_\+\+DC\+\_\+\+PIN)
+\item 
+\#define {\bfseries LCD\+\_\+\+DC\+\_\+clr}~LCD\+\_\+\+DC\+\_\+\+PORT    \&= $\sim$(1 $<$$<$ LCD\+\_\+\+DC\+\_\+\+PIN)
+\item 
+\#define {\bfseries SDIN\+\_\+set}~SDIN\+\_\+\+PORT      $\vert$=  (1 $<$$<$ SDIN\+\_\+\+PIN)
+\item 
+\#define {\bfseries SDIN\+\_\+clr}~SDIN\+\_\+\+PORT      \&= $\sim$(1 $<$$<$ SDIN\+\_\+\+PIN)
+\item 
+\#define {\bfseries SCLK\+\_\+set}~SCLK\+\_\+\+PORT      $\vert$=  (1 $<$$<$ SCLK\+\_\+\+PIN)
+\item 
+\#define {\bfseries SCLK\+\_\+clr}~SCLK\+\_\+\+PORT      \&= $\sim$(1 $<$$<$ SCLK\+\_\+\+PIN)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{Indent}\textbf{ Functions}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__karetka__lcd_gab3d3c08a4027d3e918914c1562ced027}{LCD\+\_\+clear}} (void)
+\begin{DoxyCompactList}\small\item\em Clears LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_ga9dd366b728e723c8537c8ead7e10d721}{LCD\+\_\+write\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Displays init message defined init\+\_\+msg\+\_\+1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_ga301a0b73016a44e015dbd374c08243d4}{LCD\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes LCD pins and LCD with default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_gafbf41bd2716c81ed6c3b7648db89bc85}{LCD\+\_\+write\+\_\+byte}} (unsigned char dat, unsigned char command)
+\begin{DoxyCompactList}\small\item\em Write byte using software SPI to LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_gad44346cba418618965d0a4c35170c545}{LCD\+\_\+write\+\_\+english\+\_\+string}} (unsigned char X, unsigned char Y, char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Write english string to display at specific location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_gababb9428b935a712d39c05e5d390a9df}{LCD\+\_\+write\+\_\+english\+\_\+string\+\_\+continue}} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Write string to next location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_ga7853e350aabf1a29e7d73a3cffa39e5f}{LCD\+\_\+write\+\_\+english\+\_\+string\+\_\+continue\+\_\+precise}} (char $\ast$s, uint16\+\_\+t data\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write string to next location with precise length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_ga2fcc3b8c2118c213d8458ea42066246c}{LCD\+\_\+write\+\_\+char}} (unsigned char c)
+\begin{DoxyCompactList}\small\item\em Write single char to display (using \mbox{\hyperlink{english__font_8h_source}{english\+\_\+font.\+h}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_gaf11001dc77aea7b4bdfd6d30a029a52f}{LCD\+\_\+set\+\_\+\+XY}} (unsigned char X, unsigned char Y)
+\begin{DoxyCompactList}\small\item\em Set cursor on the screen to precise location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_ga2eb5b06a40210637c4ef83f81b94828f}{LCD\+\_\+write\+\_\+whole\+\_\+screen}} (unsigned char $\ast$cells, uint16\+\_\+t cells\+\_\+n, uint16\+\_\+t start\+\_\+x, uint16\+\_\+t start\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Display image consisting of bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__karetka__lcd_gab16d07e080f1c1f5a2bfa2c10b0d1f66}{LCD\+\_\+write\+\_\+bytes\+\_\+xy\+\_\+defined\+\_\+width}} (unsigned char $\ast$cells, uint16\+\_\+t width, uint16\+\_\+t size, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Display image consisting of bytes with defined length after every n$\ast$length bytes new line is sent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
