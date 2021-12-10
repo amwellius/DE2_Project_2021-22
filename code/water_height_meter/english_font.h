@@ -5,6 +5,18 @@
  *  Author: 4a4ik
  */
 
+/**
+ * @file 
+ * @defgroup 4a4ik English font for Nokia LCD Library <english_font.h>
+ * @code #include "english_font.h" @endcode
+ * @brief english_font.h for AVR-GCC.
+ *
+ * The library contains definitions of symbols to be displayed on Nokia LCD.
+ *
+ * @{
+ */
+
+
 // 6 x 8 font
 // 1 pixel space at left and bottom
 // index = ASCII - 32

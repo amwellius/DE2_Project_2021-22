@@ -5,6 +5,15 @@
  *  Author: gkaretka
  */ 
 
+/**
+ * @file 
+ * @defgroup knob_kocum_karetka_kosik_main Main static <main.h>
+ * @code #include "main.h" @endcode
+ *
+ * @brief Main file consists of functions and definitions for displaying data, water tank dimensions, calculations and other.  
+ * @{
+ */
+
 
 #ifndef MAIN_H_
 #define MAIN_H_
