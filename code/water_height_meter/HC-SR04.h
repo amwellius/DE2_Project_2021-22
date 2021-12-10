@@ -1,8 +1,8 @@
 /*
- * HC_SR04.h
+ * main.h
  *
- * Created: 24.11.2021 12:20:47
- *  Author: student
+ * Created: 24. 11. 2021 12:00:06
+ *  Author: filip
  */ 
 
 
