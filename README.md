@@ -252,6 +252,9 @@ Video available here: <br/>
    
 Documentation available here: <br/>
 
+As PDF [file](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/docs/latex/refman.pdf)
+or as as [doxygen generated website](https://github.com/amwellius/DE2_Project_2021-22/tree/main/code/water_height_meter/docs/html) (download required, open index.html)
+
 <a name="references"></a>
 
 ### Schematic
