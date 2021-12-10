@@ -21,7 +21,7 @@ Link to this file in GitHub repository:
 * [Hardware description](#hardware)
 * [Libraries description](#libs)
 * [Main application](#main)
-* [Video](#video)
+* [Video and Documentation](#video)
 * [References](#references)
 
 <a name="objectives"></a>
@@ -245,13 +245,16 @@ Rises when unexpected data is measured.
 
 <a name="video"></a>
 
-## Video
+## Video and Documentations
 
-[Link to YouTube](https://www.youtube.com/watch?v=HSv_cm3vf8U) 
+Video available here: <br/>
+   [Link to YouTube](https://www.youtube.com/watch?v=HSv_cm3vf8U) 
+   
+Documentation available here: <br/>
 
 <a name="references"></a>
 
-## Schematic
+### Schematic
 
 ![figure](Images/schematic.png)
 
