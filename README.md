@@ -168,6 +168,10 @@ Write your text here
 
 <a name="references"></a>
 
+## Schematic
+
+![figure](Images/schematic.png)
+
 ## References
 
 ### Used materials:
