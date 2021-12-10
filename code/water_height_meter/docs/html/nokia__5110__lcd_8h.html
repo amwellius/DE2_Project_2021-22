@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('nokia__5110__lcd_8h.html',''); initRes
 <div class="contents">
 <div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
 <code>#include &lt;util/delay.h&gt;</code><br />
-<code>#include &quot;water_symbols.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="water__symbols_8h_source.html">water_symbols.h</a>&quot;</code><br />
 </div>
 <p><a href="nokia__5110__lcd_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -150,29 +150,38 @@ Macros</h2></td></tr>
 <tr class="memitem:ga631406dfd15c059fe329afc466c03e79"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_OF_CELLS</b>&#160;&#160;&#160;504</td></tr>
 <tr class="separator:ga631406dfd15c059fe329afc466c03e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Definitions LCD</div></td></tr>
 <tr class="memitem:ga68fa0aea4706906227de89af0b586c8f"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RST_set</b>&#160;&#160;&#160;LCD_RST_PORT   |=  (1 &lt;&lt; LCD_RST_PIN)</td></tr>
+<tr class="memdesc:ga68fa0aea4706906227de89af0b586c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RST pin to 1. <br /></td></tr>
 <tr class="separator:ga68fa0aea4706906227de89af0b586c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf6f2e66fabbc6b0223ff1c9431a83c21"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RST_clr</b>&#160;&#160;&#160;LCD_RST_PORT   &amp;= ~(1 &lt;&lt; LCD_RST_PIN)</td></tr>
+<tr class="memdesc:gaf6f2e66fabbc6b0223ff1c9431a83c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RST pin to 0. <br /></td></tr>
 <tr class="separator:gaf6f2e66fabbc6b0223ff1c9431a83c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga631b6138d6d52095e28b160694b2fe3b"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_DC_set</b>&#160;&#160;&#160;LCD_DC_PORT    |=  (1 &lt;&lt; LCD_DC_PIN)</td></tr>
+<tr class="memdesc:ga631b6138d6d52095e28b160694b2fe3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set DC pin to 1. <br /></td></tr>
 <tr class="separator:ga631b6138d6d52095e28b160694b2fe3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0c267fe9f0b5f9dac0d443adde0aea34"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_DC_clr</b>&#160;&#160;&#160;LCD_DC_PORT    &amp;= ~(1 &lt;&lt; LCD_DC_PIN)</td></tr>
+<tr class="memdesc:ga0c267fe9f0b5f9dac0d443adde0aea34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RST pin to 0. <br /></td></tr>
 <tr class="separator:ga0c267fe9f0b5f9dac0d443adde0aea34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab9c71c0c76b7dbfd2910d3c973e31e9d"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIN_set</b>&#160;&#160;&#160;SDIN_PORT      |=  (1 &lt;&lt; SDIN_PIN)</td></tr>
+<tr class="memdesc:gab9c71c0c76b7dbfd2910d3c973e31e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SDIN (serial data in) pin to 1. <br /></td></tr>
 <tr class="separator:gab9c71c0c76b7dbfd2910d3c973e31e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa46cc8980269c3f0d5da6b18c088ae2c"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SDIN_clr</b>&#160;&#160;&#160;SDIN_PORT      &amp;= ~(1 &lt;&lt; SDIN_PIN)</td></tr>
+<tr class="memdesc:gaa46cc8980269c3f0d5da6b18c088ae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SDIN (serial data in) pin to 0. <br /></td></tr>
 <tr class="separator:gaa46cc8980269c3f0d5da6b18c088ae2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga95d701b1c188a6eb4f10dc71c8325368"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SCLK_set</b>&#160;&#160;&#160;SCLK_PORT      |=  (1 &lt;&lt; SCLK_PIN)</td></tr>
+<tr class="memdesc:ga95d701b1c188a6eb4f10dc71c8325368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SCLK (serial clock) pin to 1. <br /></td></tr>
 <tr class="separator:ga95d701b1c188a6eb4f10dc71c8325368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga178bec9b54624b41c031aa6fcfddd067"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SCLK_clr</b>&#160;&#160;&#160;SCLK_PORT      &amp;= ~(1 &lt;&lt; SCLK_PIN)</td></tr>
+<tr class="memdesc:ga178bec9b54624b41c031aa6fcfddd067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SCLK (serial clock) pin to 0. <br /></td></tr>
 <tr class="separator:ga178bec9b54624b41c031aa6fcfddd067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>

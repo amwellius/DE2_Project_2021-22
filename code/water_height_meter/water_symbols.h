@@ -1,9 +1,11 @@
-/*
- * water_symbols.h
+/**
+ * @file 
+ * @defgroup karetka_kosik_water_symbols Water symbols static <water_symbols.h>
+ * @code #include "water_symbols.h" @endcode
  *
- * Created: 20. 11. 2021 20:02:15
- *  Author: gkaretka
- */ 
+ * @brief Application symbols stored as array for Nokia 5110 LCD, AVR-GCC compatible.
+ * @{
+ */
 
 #ifndef WATER_SYMBOLS_H
 #define WATER_SYMBOLS_H

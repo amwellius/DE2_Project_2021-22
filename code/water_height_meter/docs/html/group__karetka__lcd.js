@@ -1,5 +1,13 @@
 var group__karetka__lcd =
 [
+    [ "LCD_DC_clr", "group__karetka__lcd.html#ga0c267fe9f0b5f9dac0d443adde0aea34", null ],
+    [ "LCD_DC_set", "group__karetka__lcd.html#ga631b6138d6d52095e28b160694b2fe3b", null ],
+    [ "LCD_RST_clr", "group__karetka__lcd.html#gaf6f2e66fabbc6b0223ff1c9431a83c21", null ],
+    [ "LCD_RST_set", "group__karetka__lcd.html#ga68fa0aea4706906227de89af0b586c8f", null ],
+    [ "SCLK_clr", "group__karetka__lcd.html#ga178bec9b54624b41c031aa6fcfddd067", null ],
+    [ "SCLK_set", "group__karetka__lcd.html#ga95d701b1c188a6eb4f10dc71c8325368", null ],
+    [ "SDIN_clr", "group__karetka__lcd.html#gaa46cc8980269c3f0d5da6b18c088ae2c", null ],
+    [ "SDIN_set", "group__karetka__lcd.html#gab9c71c0c76b7dbfd2910d3c973e31e9d", null ],
     [ "LCD_clear", "group__karetka__lcd.html#gab3d3c08a4027d3e918914c1562ced027", null ],
     [ "LCD_init", "group__karetka__lcd.html#ga301a0b73016a44e015dbd374c08243d4", null ],
     [ "LCD_set_XY", "group__karetka__lcd.html#gaf11001dc77aea7b4bdfd6d30a029a52f", null ],

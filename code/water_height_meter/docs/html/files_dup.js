@@ -6,5 +6,5 @@ var files_dup =
     [ "main.h", "main_8h_source.html", null ],
     [ "nokia_5110_lcd.h", "nokia__5110__lcd_8h.html", "nokia__5110__lcd_8h" ],
     [ "timer.h", "timer_8h.html", "timer_8h" ],
-    [ "water_symbols.h", "water__symbols_8h_source.html", null ]
+    [ "water_symbols.h", "water__symbols_8h.html", null ]
 ];

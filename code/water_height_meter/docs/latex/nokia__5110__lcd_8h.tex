@@ -41,23 +41,27 @@
 \#define {\bfseries SCLK\+\_\+\+PIN}~1
 \item 
 \#define {\bfseries NUM\+\_\+\+OF\+\_\+\+CELLS}~504
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Definitions LCD}\par
+\begin{DoxyCompactItemize}
 \item 
 \#define {\bfseries LCD\+\_\+\+RST\+\_\+set}~LCD\+\_\+\+RST\+\_\+\+PORT   $\vert$=  (1 $<$$<$ LCD\+\_\+\+RST\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set RST pin to 1. \end{DoxyCompactList}\item 
 \#define {\bfseries LCD\+\_\+\+RST\+\_\+clr}~LCD\+\_\+\+RST\+\_\+\+PORT   \&= $\sim$(1 $<$$<$ LCD\+\_\+\+RST\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set RST pin to 0. \end{DoxyCompactList}\item 
 \#define {\bfseries LCD\+\_\+\+DC\+\_\+set}~LCD\+\_\+\+DC\+\_\+\+PORT    $\vert$=  (1 $<$$<$ LCD\+\_\+\+DC\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set DC pin to 1. \end{DoxyCompactList}\item 
 \#define {\bfseries LCD\+\_\+\+DC\+\_\+clr}~LCD\+\_\+\+DC\+\_\+\+PORT    \&= $\sim$(1 $<$$<$ LCD\+\_\+\+DC\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set RST pin to 0. \end{DoxyCompactList}\item 
 \#define {\bfseries SDIN\+\_\+set}~SDIN\+\_\+\+PORT      $\vert$=  (1 $<$$<$ SDIN\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set SDIN (serial data in) pin to 1. \end{DoxyCompactList}\item 
 \#define {\bfseries SDIN\+\_\+clr}~SDIN\+\_\+\+PORT      \&= $\sim$(1 $<$$<$ SDIN\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set SDIN (serial data in) pin to 0. \end{DoxyCompactList}\item 
 \#define {\bfseries SCLK\+\_\+set}~SCLK\+\_\+\+PORT      $\vert$=  (1 $<$$<$ SCLK\+\_\+\+PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Set SCLK (serial clock) pin to 1. \end{DoxyCompactList}\item 
 \#define {\bfseries SCLK\+\_\+clr}~SCLK\+\_\+\+PORT      \&= $\sim$(1 $<$$<$ SCLK\+\_\+\+PIN)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set SCLK (serial clock) pin to 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
 \doxysubsection*{Functions}
 \begin{Indent}\textbf{ Functions}\par
 \begin{DoxyCompactItemize}

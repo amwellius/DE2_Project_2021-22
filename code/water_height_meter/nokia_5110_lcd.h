@@ -1,14 +1,3 @@
-/***********************************************************************
- * 
- * Timer library for AVR-GCC.
- * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
- *
- * Copyright (c) 2019-Present Tomas Fryza
- * Dept. of Radio Electronics, Brno University of Technology, Czechia
- * This work is licensed under the terms of the MIT license.
- *
- **********************************************************************/
-
 /**
  * @file 
  * @defgroup karetka_lcd Nokia 5110 LCD Library <nokia_5110_lcd.h>
@@ -17,6 +6,9 @@
  * @note to modify this code to work with any pinout, modify pin definitions in nokia_5110_lcd.h
  *
  * @brief LCD Nokia 5110 library for AVR-GCC.
+ *
+ * The library contains functions for controlling Nokia 5110 LCD screen via software SPI. With small adjustments it should work with any micrcontroller.
+ *
  * @{
  */
 
@@ -94,8 +86,6 @@
 
 #endif
 
-/* Defines */
-
 #define NUM_OF_CELLS    504
 
 /*
@@ -106,16 +96,28 @@
 
 /* Macros to ease the work */
 
+/**
+ * @name  Definitions LCD
+ */
+
+/** @brief Set RST pin to 1 */
 #define LCD_RST_set  LCD_RST_PORT   |=  (1 << LCD_RST_PIN)
+/** @brief Set RST pin to 0 */
 #define LCD_RST_clr  LCD_RST_PORT   &= ~(1 << LCD_RST_PIN)
 
+/** @brief Set DC pin to 1 */
 #define LCD_DC_set   LCD_DC_PORT    |=  (1 << LCD_DC_PIN)
+/** @brief Set RST pin to 0 */
 #define LCD_DC_clr   LCD_DC_PORT    &= ~(1 << LCD_DC_PIN)
 
+/** @brief Set SDIN (serial data in) pin to 1 */
 #define SDIN_set     SDIN_PORT      |=  (1 << SDIN_PIN)    
+/** @brief Set SDIN (serial data in) pin to 0 */
 #define SDIN_clr     SDIN_PORT      &= ~(1 << SDIN_PIN)
 
+/** @brief Set SCLK (serial clock) pin to 1 */
 #define SCLK_set     SCLK_PORT      |=  (1 << SCLK_PIN)
+/** @brief Set SCLK (serial clock) pin to 0 */
 #define SCLK_clr     SCLK_PORT      &= ~(1 << SCLK_PIN)
 
 /* Function prototypes -----------------------------------------------*/
