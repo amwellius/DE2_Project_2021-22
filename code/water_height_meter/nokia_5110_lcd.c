@@ -49,9 +49,7 @@ void LCD_clear()
     LCD_write_byte(0x80, 1);
 
     for (unsigned int i = 0; i < NUM_OF_CELLS; i++)
-    {
         LCD_write_byte(0, 0);
-    }
 }
 
 void LCD_write_byte(unsigned char dat, unsigned char command)
@@ -59,13 +57,12 @@ void LCD_write_byte(unsigned char dat, unsigned char command)
     unsigned char i;
 
     if (command == 1)
-    LCD_DC_clr;
+        LCD_DC_clr;
     else
-    LCD_DC_set;
+        LCD_DC_set;
 
-    for(i = 0; i < 8; i++)
-    {
-        if(dat&0x80)
+    for (i = 0; i < 8; i++) {
+        if (dat&0x80)
             SDIN_set;
         else
             SDIN_clr;
@@ -94,28 +91,24 @@ void LCD_write_char(unsigned char c)
 void LCD_write_english_string(unsigned char X, unsigned char Y, char *s)
 {
     LCD_set_XY(X,Y);
-    while (*s)
-    {
+    while (*s) {
         LCD_write_char(*s);
         s++;
     }
 }
 
-// not safe
 void LCD_write_english_string_continue(char *s)
 {
-    while (*s)
-    {
+    while (*s) {
         LCD_write_char(*s);
         s++;
     }    
 }
 
-// safe
+
 void LCD_write_english_string_continue_precise(char *s, uint16_t data_len)
 {
-    while (*s)
-    {
+    while (*s) {
         LCD_write_char(*s);
         s++;
         if (s >= data_len) return;
@@ -128,8 +121,6 @@ void LCD_write_whole_screen(unsigned char *cells, uint16_t cells_n, uint16_t sta
         LCD_write_byte(cells[i], 0);
 }
 
-// width in cells (vertical 1bit wide lines)
-// size of whole array in bytes
 void LCD_write_bytes_xy_defined_width(unsigned char *cells, uint16_t width, uint16_t size, uint16_t x, uint16_t y)
 {
     LCD_set_XY(x, y);
