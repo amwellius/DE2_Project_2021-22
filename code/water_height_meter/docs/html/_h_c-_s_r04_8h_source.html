@@ -86,30 +86,31 @@ $(document).ready(function(){initNavTree('_h_c-_s_r04_8h_source.html',''); initR
   <div class="headertitle"><div class="title">C:/Users/gkaretka/Documents/GitHub/DE2_Project_2021-22/code/water_height_meter/HC-SR04.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * main.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Created: 24. 11. 2021 12:00:06</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Author: filip</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef HC_SR04_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define HC_SR04_H_</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> init_ultrasonic_sensor();</div>
+<a href="_h_c-_s_r04_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef HC_SR04_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define HC_SR04_H_</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>uint32_t get_dist();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>uint32_t get_dist_avg();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>uint32_t get_cnt();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span><span class="comment">/* HC-SR04_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/* Function prototypes -----------------------------------------------*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__filip__ul.html#gabc01d36f88638c858f285e64c66c08dd">init_ultrasonic_sensor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>uint32_t <a class="code hl_function" href="group__filip__ul.html#ga009499284ff52827cfa67412485bd765">get_dist</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>uint32_t <a class="code hl_function" href="group__filip__ul.html#ga070044ddce3d2786603ff3caa94b3b00">get_dist_avg</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>uint32_t <a class="code hl_function" href="group__filip__ul.html#gafd7147d5b08c8cdd659c93122ed40265">get_cnt</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">/* HC-SR04_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup__filip__ul_html_ga009499284ff52827cfa67412485bd765"><div class="ttname"><a href="group__filip__ul.html#ga009499284ff52827cfa67412485bd765">get_dist</a></div><div class="ttdeci">uint32_t get_dist()</div><div class="ttdoc">Return last measured distance in mm.</div><div class="ttdef"><b>Definition:</b> HC-SR04.c:88</div></div>
+<div class="ttc" id="agroup__filip__ul_html_ga070044ddce3d2786603ff3caa94b3b00"><div class="ttname"><a href="group__filip__ul.html#ga070044ddce3d2786603ff3caa94b3b00">get_dist_avg</a></div><div class="ttdeci">uint32_t get_dist_avg()</div><div class="ttdoc">Return average of 10 most recent measured distances in mm.</div><div class="ttdef"><b>Definition:</b> HC-SR04.c:93</div></div>
+<div class="ttc" id="agroup__filip__ul_html_gabc01d36f88638c858f285e64c66c08dd"><div class="ttname"><a href="group__filip__ul.html#gabc01d36f88638c858f285e64c66c08dd">init_ultrasonic_sensor</a></div><div class="ttdeci">void init_ultrasonic_sensor(void)</div><div class="ttdoc">Init ultrasound sensor. Setup pins.</div><div class="ttdef"><b>Definition:</b> HC-SR04.c:67</div></div>
+<div class="ttc" id="agroup__filip__ul_html_gafd7147d5b08c8cdd659c93122ed40265"><div class="ttname"><a href="group__filip__ul.html#gafd7147d5b08c8cdd659c93122ed40265">get_cnt</a></div><div class="ttdeci">uint32_t get_cnt()</div><div class="ttdoc">Return counts of timer of input pulse.</div><div class="ttdef"><b>Definition:</b> HC-SR04.c:103</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>HC-SR04.h</b></li>
+    <li class="navelem"><a class="el" href="_h_c-_s_r04_8h.html">HC-SR04.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>

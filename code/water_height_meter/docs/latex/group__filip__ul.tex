@@ -1,0 +1,85 @@
+\hypertarget{group__filip__ul}{}\doxysection{Ultrasound sensor Library \texorpdfstring{$<$}{<}HC-\/\+SR04.h\texorpdfstring{$>$}{>}}
+\label{group__filip__ul}\index{Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}}
+
+
+HC-\/\+SR04 for AVR-\/\+GCC.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__filip__ul_gabc01d36f88638c858f285e64c66c08dd}{init\+\_\+ultrasonic\+\_\+sensor}} (void)
+\begin{DoxyCompactList}\small\item\em Init ultrasound sensor. Setup pins. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__filip__ul_ga009499284ff52827cfa67412485bd765}{get\+\_\+dist}} ()
+\begin{DoxyCompactList}\small\item\em Return last measured distance in mm. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__filip__ul_ga070044ddce3d2786603ff3caa94b3b00}{get\+\_\+dist\+\_\+avg}} ()
+\begin{DoxyCompactList}\small\item\em Return average of 10 most recent measured distances in mm. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__filip__ul_gafd7147d5b08c8cdd659c93122ed40265}{get\+\_\+cnt}} ()
+\begin{DoxyCompactList}\small\item\em Return counts of timer of input pulse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+HC-\/\+SR04 for AVR-\/\+GCC. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_h_c-_s_r04_8h}{HC-\/SR04.h}}"{}} }
+
+\end{DoxyCode}
+
+
+The library contains functions for controlling HC-\/\+SR04 and getting distance, ticks and average distance. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__filip__ul_gafd7147d5b08c8cdd659c93122ed40265}\label{group__filip__ul_gafd7147d5b08c8cdd659c93122ed40265}} 
+\index{Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}!get\_cnt@{get\_cnt}}
+\index{get\_cnt@{get\_cnt}!Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}}
+\doxysubsubsection{\texorpdfstring{get\_cnt()}{get\_cnt()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+cnt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return counts of timer of input pulse. 
+
+\begin{DoxyReturn}{Returns}
+distance in mm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__filip__ul_ga009499284ff52827cfa67412485bd765}\label{group__filip__ul_ga009499284ff52827cfa67412485bd765}} 
+\index{Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}!get\_dist@{get\_dist}}
+\index{get\_dist@{get\_dist}!Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}}
+\doxysubsubsection{\texorpdfstring{get\_dist()}{get\_dist()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return last measured distance in mm. 
+
+\begin{DoxyReturn}{Returns}
+distance in mm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__filip__ul_ga070044ddce3d2786603ff3caa94b3b00}\label{group__filip__ul_ga070044ddce3d2786603ff3caa94b3b00}} 
+\index{Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}!get\_dist\_avg@{get\_dist\_avg}}
+\index{get\_dist\_avg@{get\_dist\_avg}!Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}}
+\doxysubsubsection{\texorpdfstring{get\_dist\_avg()}{get\_dist\_avg()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+dist\+\_\+avg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return average of 10 most recent measured distances in mm. 
+
+\begin{DoxyReturn}{Returns}
+distance in mm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__filip__ul_gabc01d36f88638c858f285e64c66c08dd}\label{group__filip__ul_gabc01d36f88638c858f285e64c66c08dd}} 
+\index{Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}!init\_ultrasonic\_sensor@{init\_ultrasonic\_sensor}}
+\index{init\_ultrasonic\_sensor@{init\_ultrasonic\_sensor}!Ultrasound sensor Library $<$HC-\/SR04.h$>$@{Ultrasound sensor Library $<$HC-\/SR04.h$>$}}
+\doxysubsubsection{\texorpdfstring{init\_ultrasonic\_sensor()}{init\_ultrasonic\_sensor()}}
+{\footnotesize\ttfamily void init\+\_\+ultrasonic\+\_\+sensor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Init ultrasound sensor. Setup pins. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

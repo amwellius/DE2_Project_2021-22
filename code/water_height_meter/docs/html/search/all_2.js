@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nokia_205110_20lcd_20library_20_3cnokia_5f5110_5flcd_2eh_3e_0',['Nokia 5110 LCD Library &lt;nokia_5110_lcd.h&gt;',['../group__karetka__lcd.html',1,'']]],
-  ['nokia_5f5110_5flcd_2eh_1',['nokia_5110_lcd.h',['../nokia__5110__lcd_8h.html',1,'']]]
+  ['init_5fultrasonic_5fsensor_0',['init_ultrasonic_sensor',['../group__filip__ul.html#gabc01d36f88638c858f285e64c66c08dd',1,'init_ultrasonic_sensor():&#160;HC-SR04.c'],['../group__filip__ul.html#gabc01d36f88638c858f285e64c66c08dd',1,'init_ultrasonic_sensor(void):&#160;HC-SR04.c']]]
 ];
