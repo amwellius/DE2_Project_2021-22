@@ -28,7 +28,7 @@ Link to this file in GitHub repository:
 
 ## Project objectives
 
-This simple but useful application will help you to fully control your **water tank** (not only!) in the garden. Do you want to know how much water left? Do you want to replenish the tank? Or are you interested in controlling your own, independent application based on the volume left in the tank? <br/>
+This simple but useful application will help you to fully control your **water tank** (not only!) in the garden. Do you want to know how much water is left? Do you want to refill the tank? Or are you interested in controlling your own independent application based on the volume left in the tank? <br/>
 No problem! <br/>
 With our **Water Tank Controller** you will be able to:
 - know **current water level** in centimeters, percentage and liters,
@@ -43,7 +43,7 @@ With our **Water Tank Controller** you will be able to:
 
 ## Hardware description
 
-As main programming board is used **Arduino UNO**. For representing results was chosen **Nokia 5110 LCD display**, **Relay module** and **button** (optional). Main water level sensor is ultraonic **HC-SR04**. There is one extra sensor used as backup to prevent overflowing the tank or detecting filth (leaves, flowers, pollen, ...) in the tank. We have used **Capacitive Soil Moisture Sensor v1.2**. 
+As main programming board is used **Arduino UNO**. For displaying results **Nokia 5110 LCD display** was selected, **Relay module** and **button** (optional). Main water level sensor is ultraonic **HC-SR04**. There is one extra sensor used as backup to prevent overflowing the tank or detecting filth (leaves, flowers, pollen, ...) in the tank. We have used **Capacitive Soil Moisture Sensor v1.2**. 
 
 ### Arduino UNO + breadboard 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/ATMega_328P_datasheet.pdf)
