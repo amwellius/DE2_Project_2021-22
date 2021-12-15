@@ -28,7 +28,7 @@ Link to this file in GitHub repository:
 
 ## Project objectives
 
-This simple but useful application will help you to fully control your **water tank** (not only!) in the garden. Do you want to know how much water is left? Do you want to refill the tank? Or are you interested in controlling your own independent application based on the volume left in the tank? <br/>
+This simple but useful application will help you to fully control your **water tank** (not only!) in the garden. Do you want to know how much water left? Do you want to refill the tank? Or are you interested in controlling your own independent application based on the volume left in the tank? <br/>
 No problem! <br/>
 With our **Water Tank Controller** you will be able to:
 - know **current water level** in centimeters, percentage and liters,
@@ -204,7 +204,7 @@ The main purpose of this application is to automatize operation of regulating wa
 Our product has the ability to interact with relay modules for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
 
 ### How to use
-1. Mount *ultrasonic sensor* on the top of water tank. Sensor's reference **zero (100%)** is set to be 4 centimeters from the ultrasonic transceiver.
+1. Mount *Ultrasonic sensor* on the top of water tank. Sensor's reference **zero (100%)** is set to be 4 centimeters from the ultrasonic transceiver.
 2. Mount *Capacitive sensor* about **1 centimeter** above max water height. (If ultrasonic fails, capacitive sensor will save it from drowning).
 3. Insert dimensions of your water tank into *C code*. If maximum height of your tank is e.g. 100 cm, than insert only 96 cm, to prevent owerflow.
    ```c
@@ -247,13 +247,19 @@ Rises when unexpected data is measured.
 
 ## Video and Documentation
 
-Video available here: <br/>
+**Video available here:** <br/>
    [Link to YouTube](https://www.youtube.com/watch?v=HSv_cm3vf8U) 
-   
-Documentation available here: <br/>
 
+**HEX file available here:** <br/>
+   [HEX file](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/HEX%20files/water_height_meter.hex)
+   
+**Documentation available here:** <br/>
 As PDF [file](https://github.com/amwellius/DE2_Project_2021-22/blob/main/code/water_height_meter/docs/latex/refman.pdf)
-or as as [doxygen generated website](https://github.com/amwellius/DE2_Project_2021-22/tree/main/code/water_height_meter/docs/html) (download required, open index.html)
+or as [doxygen generated website](https://github.com/amwellius/DE2_Project_2021-22/tree/main/code/water_height_meter/docs/html) (download required, open index.html)
+
+
+
+
 
 <a name="references"></a>
 
