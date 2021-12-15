@@ -199,7 +199,7 @@ TCCR1B |= (1 << ICES1);                                             // Reset to 
 
 ![figure](Images/pic_ph_1.png)
 
-The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing **volume of owned tank**, ultrasonic sensor connected to *Arduino UNO* board will measure the water level. *LCD Nokia 5110* display shows water level in *centimeters*, *percentage* and *maximum usable volume of the water-tank*. Application uses **one extra sensor** to control the maximum volume. In normal conditions, sensor gives negative data of water level all time. It is situated few centimeters **above** the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor, ultrasonic has occurred hassle and LCD shows problem **(`Owerflow`, `Error`)**.
+The main purpose of this application is to automatize operation of regulating water level in specified tank. After knowing **volume of owned tank**, ultrasonic sensor connected to *Arduino UNO* board will measure the water level. *LCD Nokia 5110* display shows water level in *centimeters*, *percentage* and *maximum usable volume of the water-tank*. Application uses **one extra sensor** to control the maximum volume. It is situated few centimeters **above** the max bound of water (we do not want to fill the tank completely to prevent owerflow). If the water reaches this sensor LCD shows problem **(`Owerflow`, `Error`)** depending on the value of ultrasonic sensor.
 
 Our product has the ability to interact with relay modules for external usage. These can be used to replenish the tank, irrigation pump control, DC fans, windows opening, and others. 
 
