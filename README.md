@@ -43,7 +43,7 @@ With our **Water Tank Controller** you will be able to:
 
 ## Hardware description
 
-As main programming board **Arduino UNO** is used. For displaying results **Nokia 5110 LCD display** was selected, **Relay module** and **button** (optional). Ultraonic **HC-SR04** is the primary water level sensor. There is **Capacitive Soil Moisture Sensor v1.2** used as backup to prevent overflowing the tank when debris (leaves, flowers, pollen, ...) clogs in the tank sink. By small adjustments in the code it can be transformed into rain detector. 
+As main programming board **Arduino UNO** is used. For displaying results **Nokia 5110 LCD display** was selected, **Relay module** and **button** (optional). Ultrasonic **HC-SR04** is the primary water level sensor. There is **Capacitive Soil Moisture Sensor v1.2** used as backup to prevent overflowing the tank when debris (leaves, flowers, pollen, ...) clogs in the tank sink. By small adjustments in the code it can be transformed into rain detector. 
 
 ### Arduino UNO + breadboard 
 [Datasheet](https://github.com/amwellius/DE2_Project_2021-22/blob/main/Datasheets%20%2B%20DOCs/ATMega_328P_datasheet.pdf)
