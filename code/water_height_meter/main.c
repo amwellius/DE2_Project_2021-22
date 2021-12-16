@@ -241,8 +241,8 @@ void adc_init()
     // Set clock prescaler to 128
     ADCSRA |= (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
     
-    // Configure 16-bit Timer/Counter1 to start ADC conversion
-    // Set prescaler to 262 ms and enable overflow interrupt
+    // Configure Timer/Counter0 to start ADC conversion
+    // Set prescaler to 16 ms and enable overflow interrupt
     TIM0_overflow_interrupt_enable();
     TIM0_overflow_16384us();
     sei();

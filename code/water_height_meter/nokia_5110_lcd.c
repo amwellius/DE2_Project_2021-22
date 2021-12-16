@@ -140,5 +140,5 @@ void LCD_write_init()
 {
     LCD_clear();
     LCD_write_bytes_xy_defined_width((unsigned char*) init_msg_1, 68, 340, 8, 1); 
-    _delay_ms(1000);   
+    _delay_ms(5000);   
 }

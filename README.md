@@ -267,6 +267,11 @@ or as [doxygen generated website](https://github.com/amwellius/DE2_Project_2021-
 
 ![figure](Images/schematic.png)
 
+### FSM 
+
+![figure](Images/FSM.png)
+
+
 ## References
 
 ### Used materials:
